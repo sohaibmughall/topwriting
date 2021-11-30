@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Footer from '../components/header/footer/footer';
+import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
 
 class Layout extends Component {

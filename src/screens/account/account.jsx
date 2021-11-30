@@ -1,0 +1,106 @@
+import React, { Component } from 'react';
+
+class Account extends Component {
+    render() {
+        return (
+            <>
+                <main>
+                    <section className="page_title_area" data-overlay="6" data-background="assets/img/bg/page_title_bg.jpg">
+                        <div className="containe">
+                            <div className="row">
+                                <div className="col-l2">
+                                    <div className="page_title text-center">
+                                        <h2>My Account</h2>
+                                        <nav aria-label="breadcrumb">
+                                            <ol className="breadcrumb justify-content-center">
+                                                <li className="breadcrumb-item">
+                                                    <a href="index.html">Home</a>
+                                                </li>
+                                                <li className="breadcrumb-item active" aria-current="page">Account</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="account_area pt-120 pb-90">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <div className="account_wrap">
+                                        <h3 className="title">Login your Account</h3>
+                                        <form action="#">
+                                            <input type="email" placeholder="Your Email" />
+                                            <input type="password" placeholder="Password" />
+                                            <button className="thm_btn" type="submit">Login Now</button>
+                                            <div className="action ul_li">
+                                                <span className="left">
+                                                    <input id="remember" type="checkbox" />
+                                                    <label for="remember">Remember me</label>
+                                                </span>
+                                                <span className="right">
+                                                    <span>Don’t have an account<a href="#">Sign up</a></span>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="account_wrap">
+                                        <h3 className="title">Sign up your Account</h3>
+                                        <form action="#">
+                                            <input type="text" placeholder="Your Name" />
+                                            <input type="email" placeholder="Your Email" />
+                                            <input type="password" placeholder="Password" />
+                                            <button className="thm_btn" type="submit">Sign up Now</button>
+                                            <div className="action ul_li">
+                                                <span className="left">
+                                                    <input id="remember2" type="checkbox" />
+                                                    <label for="remember2">Remember me</label>
+                                                </span>
+                                                <span className="right">
+                                                    <span>Already have an accout<a href="#">Login</a></span>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="bai_area bai_bootom_space">
+                        <div className="container">
+                            <div className="row g-0">
+                                <div className="col-lg-6">
+                                    <div className="bai_wrap bai_left theme_bg">
+                                        <span># Become A Instructor</span>
+                                        <h3>Become a Instructor</h3>
+                                        <a className="thm_btn thm_btn-border" href="contact.html">apply now<i className="fal fa-long-arrow-right"></i></a>
+                                        <div className="bai_shape">
+                                            <img src="assets\img\icon\bai_shape_01.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="bai_wrap bai_right white_bg">
+                                        <span># Become A Partner</span>
+                                        <h3>Become a Partner</h3>
+                                        <a className="thm_btn thm_btn-2" href="contact.html">Contact us<i className="fal fa-long-arrow-right"></i></a>
+                                        <div className="bai_shape">
+                                            <img src="assets\img\icon\bai_shape_02.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </>
+        );
+    }
+}
+
+export default Account;
