@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Calculator from '../../components/calculator/calculator';
 
 class Home extends Component {
     render() {
@@ -106,7 +107,8 @@ class Home extends Component {
                                 <div className="row flex-row-reverse align-items-center">
                                     <div className="col-xl-7 col-lg-6 col-md-12">
                                         <div className="hero_img f-right">
-                                            <img src="assets\img\hero\hero_img.png" alt="" />
+                                        <Calculator/>
+                                            {/* <img src="assets\img\hero\hero_img.png" alt="" /> */}
                                         </div>
                                     </div>
                                     <div className="col-xl-5 col-lg-6 col-md-12">
