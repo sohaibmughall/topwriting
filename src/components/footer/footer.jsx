@@ -15,7 +15,7 @@ class Footer extends Component {
                                     </div>
                                 </div>
                                 <div className="col-lg-5 col-md-6">
-                                    <form className="sub_from" action="#">
+                                    <form className="sub_from" action="/">
                                         <input type="text" placeholder="Enter Your Mail" />
                                         <button className="thm_btn">Subscribe</button>
                                     </form>
@@ -28,15 +28,15 @@ class Footer extends Component {
                                     <div className="footer_widget">
                                         <h3>SERVICES</h3>
                                         <ul className="footer_link">
-                                            <li><a href="#">Write my Essay</a></li>
-                                            <li><a href="#">Write my Dissertation</a></li>
-                                            <li><a href="#">Assignment Writer</a></li>
-                                            <li><a href="#">Law Essay</a></li>
-                                            <li><a href="#">MBA Essay</a></li>
-                                            <li><a href="#">HRM Essay</a></li>
-                                            <li><a href="#">Literature Review</a></li>
-                                            <li><a href="#">Terms of Service</a></li>
-                                            <li><a href="#">Refund policy</a></li>
+                                            <li><Link to="/writemyessay">Write my Essay</Link></li>
+                                            <li><Link to="/writemydessertation">Write my Dissertation</Link></li>
+                                            <li><Link to="/assignmentwriter">Assignment Writer</Link></li>
+                                            <li><Link to="/lawessay">Law Essay</Link></li>
+                                            <li><Link to="/mbaessay">MBA Essay</Link></li>
+                                            <li><Link to="/hrmessay">HRM Essay</Link></li>
+                                            <li><Link to="/literaturereview">Literature Review</Link></li>
+                                            <li><Link to="/tos">Terms of Service</Link></li>
+                                            <li><Link to="/refundpolicy">Refund policy</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -44,13 +44,13 @@ class Footer extends Component {
                                     <div className="footer_widget footer_link-left">
                                         <h3>ESSAYS</h3>
                                         <ul className="footer_link">
-                                            <li><a href="#">Custom Essay</a></li>
-                                            <li><a href="#">PhD Writers</a></li>
-                                            <li><a href="#">Buy Assignments</a></li>
-                                            <li><a href="#">Coursework Help</a></li>
-                                            <li><a href="#">Nursing Essay</a></li>
-                                            <li><a href="#">Finance Essay</a></li>
-                                            <li><a href="#">Marketing Essay</a></li>
+                                            <li><Link to="/customessay">Custom Essay</Link></li>
+                                            <li><Link to="/phdwriters">PhD Writers</Link></li>
+                                            <li><Link to="/buyassignment">Buy Assignments</Link></li>
+                                            <li><Link to="/coursework">Coursework Help</Link></li>
+                                            <li><Link to="/nursingessay">Nursing Essay</Link></li>
+                                            <li><Link to="/financerssay">Finance Essay</Link></li>
+                                            <li><Link to="/marketingessay">Marketing Essay</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -58,13 +58,13 @@ class Footer extends Component {
                                     <div className="footer_widget footer_link-right">
                                         <h3>NEEDS</h3>
                                         <ul className="footer_link">
-                                            <li><a href="#">Buy Essay</a></li>
-                                            <li><a href="#">Assignment Help</a></li>
-                                            <li><a href="#">Cheap Assignment</a></li>
-                                            <li><a href="#">Do My Coursework</a></li>
-                                            <li><a href="#">Management Essay</a></li>
-                                            <li><a href="#">Economics Essay</a></li>
-                                            <li><a href="#">English Essay</a></li>
+                                            <li><Link to="/buyessay">Buy Essay</Link></li>
+                                            <li><Link to="/assignmenthelp">Assignment Help</Link></li>
+                                            <li><Link to="/cheapassignment">Cheap Assignment</Link></li>
+                                            <li><Link to="/domycoursework">Do My Coursework</Link></li>
+                                            <li><Link to="/managementessay">Management Essay</Link></li>
+                                            <li><Link to="/economicsessay">Economics Essay</Link></li>
+                                            <li><Link to="/englishessay">English Essay</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -72,11 +72,11 @@ class Footer extends Component {
                                     <div className="footer_widget footer_right_text">
                                         <h3>ASSIGNMENTS & ESSAY</h3>
                                         <ul className="footer_link">
-                                        <li><a href="#">Buy Disseratation</a></li>
-                                        <li><a href="#">Dissertation Help</a></li>
-                                        <li><a href="#">Personal Statement Help</a></li>
-                                        <li><a href="#">History Essay</a></li>
-                                        <li><a href="#">Sociology Essay</a></li>
+                                        <li><Link to="/buydisseratation">Buy Disseratation</Link></li>
+                                        <li><Link to="/disserationhelp">Dissertation Help</Link></li>
+                                        <li><Link to="/personalsh">Personal Statement Help</Link></li>
+                                        <li><Link to="/historyessay">History Essay</Link></li>
+                                        <li><Link to="/sociologyessay">Sociology Essay</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -109,10 +109,10 @@ class Footer extends Component {
                                                 services and focus on their lectures and exams while sorting out their upcoming timetable.</p>
                                         </div>
                                         <div className="social_icon mt-45">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-twitter"></i></a>
-                                            <a href="#"><i className="fab fa-behance"></i></a>
-                                            <a href="#"><i className="fab fa-youtube"></i></a>
+                                            <Link to="/"><i className="fab fa-facebook-f"></i></Link>
+                                            <Link to="/"><i className="fab fa-twitter"></i></Link>
+                                            <Link to="/"><i className="fab fa-behance"></i></Link>
+                                            <Link to="/"><i className="fab fa-youtube"></i></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -120,10 +120,10 @@ class Footer extends Component {
                                     <div className="footer_widget footer_link-left">
                                         <h3>POLICIES</h3>
                                         <ul className="footer_link">
-                                            <li><a href="#">Return Policy</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">FAQ</a></li>
-                                            <li><a href="#">Terms and Conditions</a></li>
+                                            <li><Link to="/returnpolicy">Return Policy</Link></li>
+                                            <li><Link to="/privacypolicy">Privacy Policy</Link></li>
+                                            <li><Link to="/faqs">FAQs</Link></li>
+                                            <li><Link to="/termoc">Terms and Conditions</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@ class Footer extends Component {
                                         <h3>PAYMENT</h3>
                                         <ul className="footer_link">
                                             <li><p>We accept only Paypal to</p></li>
-                                            <li><a href="mailto:hello@topwriting.co.uk">hello@topwriting.co.uk</a></li>
+                                            <li><Link to="mailto:hello@topwriting.co.uk">hello@topwriting.co.uk</Link></li>
                                             <li><p>Please note that if you do not already have PayPal we can send a money request that
                                                 can be paid on any Credit or Debit Card</p></li>
                                         </ul>
@@ -146,10 +146,10 @@ class Footer extends Component {
                                                 <p>786/A Romada tower mall Brooklyn, NYC</p>
                                             </li>
                                             <li>
-                                                <a href="tel:00 44 7950 771218">00 44 7950 771218</a>
+                                                <Link to="tel:00 44 7950 771218">00 44 7950 771218</Link>
                                             </li>
                                             <li>
-                                                <a href="mailto:hello@topwriting.co.uk">hello@topwriting.co.uk</a>
+                                                <Link to="mailto:hello@topwriting.co.uk">hello@topwriting.co.uk</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -159,7 +159,7 @@ class Footer extends Component {
                         <div className="footer_bottom">
                             <div className="left f-left ul_li">
                                 <div className="logo">
-                                    <a href="index.html"><img src="assets\img\logo\logo_white.png" alt="" /></a>
+                                    <Link to="index.html"><img src="assets\img\logo\logo_white.png" alt="" /></Link>
                                 </div>
                                 <ul className="info ul_li">
                                     <li>info@webmail.com</li>
