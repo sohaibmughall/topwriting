@@ -61,6 +61,8 @@ import Faqs from '../screens/footersection/Policies/Faqs';
 import PrivacyPolicy from '../screens/footersection/Policies/PrivacyPolicy';
 import ReturnPolicy from '../screens/footersection/Policies/ReturnPolicy';
 import TermandCondition from '../screens/footersection/Policies/TermandCondition';
+import Pages from '../components/pages/pages';
+import Linkpages from '../screens/footerlinks/linkpages';
 
 export default class route extends Component {
     render() {
@@ -111,6 +113,7 @@ export default class route extends Component {
                         <Route exact path='/privacypolicy' component={PrivacyPolicy}/>
                         <Route exact path='/faqs' component={Faqs}/>
                         <Route exact path='/termoc' component={TermandCondition}/>
+                        <Route exact path='/pages/:id' component={Linkpages}/>
                         
 
 
