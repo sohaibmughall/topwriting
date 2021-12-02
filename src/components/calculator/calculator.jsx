@@ -10,7 +10,10 @@ class Calculator extends Component {
             typechange: "",
             type: [],
             pages: 1,
-            words: 275
+            words: 275,
+            academicLevel: "",
+            urgency: "",
+            services: "",
             // calculator: {
             //     Academic_paper_writing: 10.50,
             //     Rewriting: 30.87,
@@ -27,48 +30,71 @@ class Calculator extends Component {
     addWords = () => {
         this.setState({ words: this.state.words + 275 })
         this.setState({ pages: this.state.pages + 1 })
-
-
     }
 
     removeWords = () => {
-        this.setState({ words: this.state.words + 275 })
+        this.setState({ words: this.state.words - 275 })
         this.setState({ pages: this.state.pages - 1 })
-
     }
 
     addPages = () => {
         this.setState({ pages: this.state.pages + 1 })
         this.setState({ words: this.state.words + 275 })
     }
+
     removePages = () => {
         this.setState({ pages: this.state.pages - 1 })
         this.setState({ words: this.state.words - 275 })
 
     }
     service = (e) => {
+        console.log(e.target.value);
         const datas = data.filter(number => {
-            return number.id === e ? e : 1
+            return number.id === e.target.value;
+            // if (e) {
+            //     return number.id === e.target.value;
+            // }
+            // else {
+            //     return number.id === 1;
+            // }
         })
-        datas.map(item => this.setState({ type: item.type_papers }))
+        // console.log(datas);
+        datas.map(item => this.setState({ type: item.type_papers, services: item.price }))
     }
 
+
+    componentDidMount = () => {
+        const datas = data.filter(number => {
+            return number.id === "1";
+        })
+        // console.log(datas);
+        datas.map(item => this.setState({ type: item.type_papers, services: item.price }))
+    }
+
+
     render() {
+
+        let total = null;
+        const totals = +this.state.urgency + +this.state.academicLevel + +this.state.services + +this.state.typechange;
+        const muly = totals * this.state.pages;
+        total = muly;
+
         return (
             <div class="field_item field_service">
-                <label for="customer_order_service_id">TYPES OF SERVICE</label>
-                <select id="customer_order_service_id" onChange={(e) => this.service(e.target.value)}>
+                <label for="service_type">TYPES OF SERVICE</label>
+                <select id="service_type" onChange={(e) => this.service(e)}>
                     {data.map(item => {
                         return (
-                            <option label={item.name} value={item.id} selected="selected">{item.name}</option>)
+                            <option label={item.name} value={item.id} >{item.name}</option>)
                     })}
                 </select>
-                <label for="customer_order_service_id">TYPE OF PAPER</label>
-                <select id="customer_order_service_id" onChange={(e) => this.setState({ typechange: e.target.value })}>
+                <label for="paper_type">TYPE OF PAPER</label>
+                <select id="paper_type" onChange={(e) => this.setState({ typechange: e.target.value })}>
+                    <option label="Please Select"></option>
                     {
                         this.state.type.map(item => {
                             return (
-                                <option label={item.name} value={item.value} selected="selected">{item.name}</option>
+                                <option label={item.name} value={item.price} defaultValue={item.price}>{item.name}</option>
 
                             )
                         })
@@ -97,33 +123,33 @@ class Calculator extends Component {
                 </div>
                 <br /> */}
                 <label for="customer_order_service_id">ACADEMIC LEVEL</label>
-                <select id="customer_order_service_id">
-                    <option label="GCSE / A Level" value="object:36" selected="selected">GCSE / A Level</option>
-                    <option label="HNC / HND" value="object:37">HNC / HND</option>
-                    <option label="Undergraduate" value="object:38">Undergraduate</option>
-                    <option label="Master's" value="object:39">Master's</option>
-                    <option label="Doctoral" value="object:39">Doctoral</option>
+                <select id="customer_order_service_id" onChange={(e) => this.setState({ academicLevel: e.target.value })}>
+                    <option label="GCSE / A Level" value="1">GCSE / A Level</option>
+                    <option label="HNC / HND" value="21">HNC / HND</option>
+                    <option label="Undergraduate" value="50">Undergraduate</option>
+                    <option label="Master's" value="35">Master's</option>
+                    <option label="Doctoral" value="40">Doctoral</option>
                 </select>
                 <label for="customer_order_service_id">URGENCY</label>
-                <select id="customer_order_service_id">
-                    <option label="3 hours" value="object:36" selected="selected">3 hours</option>
-                    <option label="6 hours" value="object:37">6 hours</option>
-                    <option label="8 hours" value="object:38">8 hours</option>
-                    <option label="12 hours" value="object:39">12 hours</option>
-                    <option label="18 hours" value="object:39">18 hours</option>
-                    <option label="24 hours" value="object:39">24 hours</option>
-                    <option label="48 hours" value="object:39">48 hours</option>
-                    <option label="3 days" value="object:39">3 days</option>
-                    <option label="4 days" value="object:39">4 days</option>
-                    <option label="5 days" value="object:39">5 days</option>
-                    <option label="6 days" value="object:39">6 days</option>
-                    <option label="7 days" value="object:39">7 days</option>
-                    <option label="10 days" value="object:39">10 days</option>
-                    <option label="14 days" value="object:39">14 days</option>
+                <select id="customer_order_service_id" onChange={(e) => this.setState({ urgency: e.target.value })}>
+                    <option label="3 hours" value="2">3 hours</option>
+                    <option label="6 hours" value="1">6 hours</option>
+                    <option label="8 hours" value="12">8 hours</option>
+                    <option label="12 hours" value="24">12 hours</option>
+                    <option label="18 hours" value="30">18 hours</option>
+                    <option label="24 hours" value="40">24 hours</option>
+                    <option label="48 hours" value="11">48 hours</option>
+                    <option label="3 days" value="23">3 days</option>
+                    <option label="4 days" value="17">4 days</option>
+                    <option label="5 days" value="16">5 days</option>
+                    <option label="6 days" value="13">6 days</option>
+                    <option label="7 days" value="8">7 days</option>
+                    <option label="10 days" value="5">10 days</option>
+                    <option label="14 days" value="6">14 days</option>
                 </select>
                 <br />
                 <br />
-                <h3>Total : <span>{this.state.total}</span> </h3>
+                <h3>Total : <span>{total}</span> </h3>
             </div>
         );
     }
