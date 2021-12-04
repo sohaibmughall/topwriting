@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Calculator from '../../components/calculator/calculator';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
     render() {
@@ -142,7 +143,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end">
-                                        <a className="thm_btn" href="courses.html">View all<i className="fal fa-long-arrow-right"></i></a>
+                                        <a className="thm_btn" href="courses.html"><Link to="/cart">View all</Link><i className="fal fa-long-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -510,10 +511,18 @@ class Home extends Component {
                                                     </div>
                                                 </li>
                                             </ul>
+                                             
                                         </div>
+                                   
                                     </div>
                                 </div>
                             </div>
+                            <div className="col-lg-4 col-md-4">
+                                    <div className="crs_btn text-md-end">
+                                        <Link className="thm_btn" to="/cart">Cart<i className="fal fa-long-arrow-right"></i></Link>
+                                        
+                                    </div>
+                                </div>
                         </div>
                     </section>
 

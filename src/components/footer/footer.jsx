@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Footerdata from './footerdata';
 
 class Footer extends Component {
+    
     render() {
+        console.log(Footerdata)
         return (
             <div>
                 <footer className="footer_area footer_bg footer_space">
@@ -28,7 +31,10 @@ class Footer extends Component {
                                     <div className="footer_widget">
                                         <h3>SERVICES</h3>
                                         <ul className="footer_link">
-                                            <li><Link to="/writemyessay">Write my Essay</Link></li>
+                                            <li >
+                                               
+                                                <Link to="/writemyessay">Write my Essay</Link>
+                                                </li>
                                             <li><Link to="/writemydessertation">Write my Dissertation</Link></li>
                                             <li><Link to="/assignmentwriter">Assignment Writer</Link></li>
                                             <li><Link to="/lawessay">Law Essay</Link></li>

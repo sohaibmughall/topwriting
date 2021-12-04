@@ -115,9 +115,10 @@ class Header extends Component {
                                         </div>
                                     </div>
                                     <div className="hamburger_menu">
-                                        <a href="javascript:void(0);" className="">
-                                            <i className="fal fa-bars"></i>
-                                        </a>
+                                        <Link to="/cart">Cart</Link>
+                                            
+                                            {/* <i className="fal fa-bars"></i> */}
+                                        
                                     </div>
                                     <div className="account">
                                         <Link to='/account'><i className="fal fa-key"></i>account</Link>

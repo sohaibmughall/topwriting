@@ -25,192 +25,43 @@ class Writers extends Component {
                         </div>
                     </section>
 
-                    <section className="team_area pt-110 pb-90">
-                        <div className="container">
-                            <div className="row justify-content-md-center">
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_01.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Mohammad Wasim</a></h3>
-                                            <p>Web Developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_02.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Yalina De Demandy</a></h3>
-                                            <p>Architecture Specialistr</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_03.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Rasalina de willamson</a></h3>
-                                            <p>Software Enginner</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_04.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Kargeso Rabada</a></h3>
-                                            <p>Sport Teacher</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_05.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Virat Kholi Ciku</a></h3>
-                                            <p>Architecture Specialist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_06.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Hasan Dewwan</a></h3>
-                                            <p>Software Enginner</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_07.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Alextina Ditarmaz</a></h3>
-                                            <p>Business Planer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_08.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Rasalina De Willamson</a></h3>
-                                            <p>Graphic Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_09.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Alex Carry</a></h3>
-                                            <p>Software Enginner</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <div className="col-lg-6 all"  style={{marginLeft:"180px", padding:"70px"} }>
+                                    <div className="about_content mb-30">
+                                        <div className="sec_title">
+                                            <h2>OUR WRITERS</h2>
+                                            <p className="text-left">Time to meet the people behind the Top Writings logo! Our writers are the engine running our system and also the ones that you, dear clients, talk to most frequently here. So we treat the process of writer assigning with the utmost care.
 
-                    <section className="bai_area bai_bootom_space">
-                        <div className="container">
-                            <div className="row g-0">
-                                <div className="col-lg-6">
-                                    <div className="bai_wrap bai_left theme_bg">
-                                        <span># Become A Instructor</span>
-                                        <h3>Become a Instructor</h3>
-                                        <a className="thm_btn thm_btn-border" href="contact.html">apply now<i className="fal fa-long-arrow-right"></i></a>
-                                        <div className="bai_shape">
-                                            <img src="assets\img\icon\bai_shape_01.png" alt="" />
+Everyone within our UK essay writing team is an expert in their chosen field and they have the corresponding credentials to prove it. We give priority to writers originating from the UK. All the candidates pass our English test that puts a special emphasis on grammar and spelling as well as a text’s integrity and readability. The freshmen who successfully completed the test and verifications start their internal probation upon completion of which they get to work with the clients.</p>
+                                        
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-lg-6 col-md-6 col-sm-6">
+                                                <div className="al_signle">
+                                                    <span><i className="fal fa-check"></i>Expert Trainer</span>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-sm-6">
+                                                <div className="al_signle">
+                                                    <span><i className="fal fa-check"></i>Remote Learning</span>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-sm-6">
+                                                <div className="al_signle">
+                                                    <span><i className="fal fa-check"></i>Lifetime Access</span>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 col-md-6 col-sm-6">
+                                                <div className="al_signle">
+                                                    <span><i className="fal fa-check"></i>Self Developmentr</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="about_btn mt-10">
+                                            <a className="thm_btn" href="courses.html">View Courses<i className="fal fa-long-arrow-right"></i></a>
+                                            <a className="thm_btn thm_btn-2" href="about.html">Start Trial<i className="fal fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
-                                    <div className="bai_wrap bai_right white_bg">
-                                        <span># Become A Partner</span>
-                                        <h3>Become a Partner</h3>
-                                        <a className="thm_btn thm_btn-2" href="contact.html">Contact us<i className="fal fa-long-arrow-right"></i></a>
-                                        <div className="bai_shape">
-                                            <img src="assets\img\icon\bai_shape_02.png" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
 
                 </main>
             </div>

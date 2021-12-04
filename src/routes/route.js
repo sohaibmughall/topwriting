@@ -63,6 +63,8 @@ import ReturnPolicy from '../screens/footersection/Policies/ReturnPolicy';
 import TermandCondition from '../screens/footersection/Policies/TermandCondition';
 import Pages from '../components/pages/pages';
 import Linkpages from '../screens/footerlinks/linkpages';
+import Footerdata from '../components/footer/footerdata';
+import Cart from '../screens/cart/cart';
 
 export default class route extends Component {
     render() {
@@ -114,6 +116,8 @@ export default class route extends Component {
                         <Route exact path='/faqs' component={Faqs}/>
                         <Route exact path='/termoc' component={TermandCondition}/>
                         <Route exact path='/writemyessay' component={Linkpages}/>
+                        <Route exact path='/cart' component={Cart}/>
+
                         
 
 
