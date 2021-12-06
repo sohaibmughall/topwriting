@@ -299,7 +299,7 @@ class Home extends Component {
                             <div className="row align-items-center mb-15">
                                 <div className="col-lg-8 col-md-8">
                                     <div className="sec_title">
-                                        <h2>Find the right course for you</h2>
+                                        <h2>ACADEMICS PAPER WRITING</h2>
                                         <p>Online learning offers a new way to explore subjects you’re passionate about.</p>
                                     </div>
                                 </div>
@@ -313,7 +313,7 @@ class Home extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_01.jpg" alt="" />
+                                            <img src="assets\img\course\f1.png" alt="" />
                                         </div>
                                         <div className="course_content">
                                             <div className="c_head">

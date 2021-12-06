@@ -65,7 +65,6 @@ import Pages from '../components/pages/pages';
 import Linkpages from '../screens/footerlinks/linkpages';
 import Footerdata from '../components/footer/footerdata';
 import Cart from '../screens/cart/cart';
-
 export default class route extends Component {
     render() {
         return (
@@ -83,6 +82,7 @@ export default class route extends Component {
                         <Route exact path='/proofreading' component={Proofreading}/>
                         <Route exact path='/admissionServices' component={Admissionservices}/>
                         <Route exact path='/dissertationServices' component={Dissertationservices}/>
+                        <Route exact path='/assignments' component={Assignments}/>
                         <Route exact path='/writemyessay' component={writemyessay}/>
                         <Route exact path='/writemydessertation' component={writemydessertation}/>
                         <Route exact path='/assignmentwriter' component={AssignmentWriter}/>
