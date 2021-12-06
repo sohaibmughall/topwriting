@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './calculator.css';
 import data from "./data"
 
@@ -14,7 +15,7 @@ class Calculator extends Component {
             academicLevel: "",
             urgency: "",
             services: "",
-            secondacademicLevel: "",
+            level: [],
         }
     }
 
@@ -43,7 +44,7 @@ class Calculator extends Component {
             return number.id === e.target.value;
         })
         // console.log(datas);
-        datas.map(item => this.setState({ type: item.type_papers, services: item.price }))
+        datas.map(item => this.setState({ type: item.type_papers, services: item.price, level: item.academic_level }))
     }
 
     componentDidMount = () => {
@@ -51,7 +52,7 @@ class Calculator extends Component {
             return number.id === "1";
         })
         // console.log(datas);
-        datas.map(item => this.setState({ type: item.type_papers, services: item.price }))
+        datas.map(item => this.setState({ type: item.type_papers, services: item.price, level: item.academic_level }))
     }
 
     render() {
@@ -95,27 +96,22 @@ class Calculator extends Component {
                     </div>
                 </div>
                 <br />
-                {/* <label for="words">NUMBER OF WORDS</label>
-                <div className="d-flex justify-content-space-evenly align-items-center">
-                    <button onClick={this.removeWords}>-</button>
-                    <p>{this.state.calculator.words}</p>
-                    <button onClick={this.addWords}>+</button>
-                </div>
-                <br /> */}
-                <label for="academic_level_1">ACADEMIC LEVEL</label>
-                <select id="academic_level_1" onChange={(e) => this.setState({ academicLevel: e.target.value })}>
-                    <option label="GCSE / A Level" value="1">GCSE / A Level</option>
-                    <option label="HNC / HND" value="21">HNC / HND</option>
-                    <option label="Undergraduate" value="50">Undergraduate</option>
-                    <option label="Master's" value="35">Master's</option>
-                    <option label="Doctoral" value="40">Doctoral</option>
-                </select>
-                <label for="academic_level_2">ACADEMIC LEVEL</label>
-                <select id="academic_level_2" onChange={(e) => this.setState({ secondacademicLevel: e.target.value })}>
-                    <option label="Bachelor's" value="6">Bachelor's</option>
-                    <option label="Master's" value="8">Master's</option>
-                    <option label="Doctoral" value="15">Doctoral</option>
-                </select>
+                {this.state.level ?
+                    <>
+                        <label for="academic_level_1">ACADEMIC LEVEL</label>
+                        <select id="academic_level_1" onChange={(e) => this.setState({ academicLevel: e.target.value })}>
+                            {
+                                this.state.level.map(item => {
+                                    return (
+                                        <option label={item.name} value={item.price} defaultValue={item.price}>{item.name}</option>
+                                    )
+                                })
+                            }
+                        </select>
+                    </>
+                    :
+                    null
+                }
                 <label for="customer_order_service_id">URGENCY</label>
                 <select id="customer_order_service_id" onChange={(e) => this.setState({ urgency: e.target.value })}>
                     <option label="3 hours" value="2">3 hours</option>
@@ -135,7 +131,10 @@ class Calculator extends Component {
                 </select>
                 <br />
                 <br />
-                <h3>Total : <span>{total}</span> </h3>
+                <div className="about_btn mt-10 d-flex justify-content-between">
+                    <h3>Total : <span>{total}</span> </h3>
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
             </div>
         );
     }

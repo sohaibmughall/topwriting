@@ -78,8 +78,27 @@ const data = [
         }, {
             name: "Other",
             price: "10.90",
-        }
-        ]
+        }],
+        academic_level: [{
+            name: "GCSE / A Level",
+            price: "1"
+        },
+        {
+            name: "HNC / HND",
+            price: "21"
+        },
+        {
+            name: "Undergraduate",
+            price: "50"
+        },
+        {
+            name: "Master's",
+            price: "35"
+        },
+        {
+            name: "Doctoral",
+            price: "40"
+        }]
     },
     {
         id: "2",
@@ -118,8 +137,19 @@ const data = [
         }, {
             name: "Power Point presentation",
             price: "14.29",
+        }],
+        academic_level: [{
+            name: "Bachelor's",
+            price: "5"
         },
-        ]
+        {
+            name: "Master's",
+            price: "10"
+        },
+        {
+            name: "Doctoral",
+            price: "20"
+        }]
     },
     {
         id: "3",
@@ -147,7 +177,27 @@ const data = [
             name: "Power Point presentation",
             price: "11.28",
         },
-        ]
+        ],
+        academic_level: [{
+            name: "Undergraduate",
+            price: "1"
+        },
+        {
+            name: "Postgraduate",
+            price: "21"
+        },
+        {
+            name: "MBA",
+            price: "50"
+        },
+        {
+            name: "Law",
+            price: "35"
+        },
+        {
+            name: "Medical",
+            price: "40"
+        }]
     },
     {
         id: "4",
