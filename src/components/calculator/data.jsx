@@ -1,6 +1,6 @@
 const data = [
     {
-        id: "1",
+        id: 1,
         name: "Academic paper writing",
         price: "10",
         type_papers: [{
@@ -101,7 +101,7 @@ const data = [
         }]
     },
     {
-        id: "2",
+        id: 2,
         name: "Dissertation services",
         price: "14",
         type_papers: [{
@@ -152,7 +152,7 @@ const data = [
         }]
     },
     {
-        id: "3",
+        id: 3,
         name: "Admission Services",
         price: "11.28",
         type_papers: [{
@@ -200,7 +200,7 @@ const data = [
         }]
     },
     {
-        id: "4",
+        id: 4,
         name: "Math/Physic/Economic/Statistic Problems",
         price: "6",
         type_papers: [{
@@ -225,7 +225,7 @@ const data = [
         ]
     },
     {
-        id: "5",
+        id: 5,
         name: "Multiple Choice Questions",
         price: "3.75",
         type_papers: [{
@@ -238,7 +238,7 @@ const data = [
         ]
     },
     {
-        id: "6",
+        id: 6,
         name: "Editing",
         price: "16",
         type_papers: [{
@@ -317,7 +317,7 @@ const data = [
         ]
     },
     {
-        id: "7",
+        id: 7,
         name: "Proofreading",
         price: "16",
         type_papers: [{
@@ -396,7 +396,7 @@ const data = [
         ]
     },
     {
-        id: "8",
+        id: 8,
         name: "Rewriting",
         price: "6",
         type_papers: [{
@@ -475,7 +475,7 @@ const data = [
         ]
     },
     {
-        id: "9",
+        id: 9,
         name: "Copywriting",
         price: "16",
         type_papers: [{
@@ -500,7 +500,7 @@ const data = [
         ]
     },
     {
-        id: "10",
+        id: 10,
         name: "Resume/CV services",
         price: "12",
         type_papers: [{

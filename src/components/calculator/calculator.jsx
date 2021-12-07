@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './calculator.css';
-import data from "./data"
+import data from "./data";
+import { add, total } from 'cart-localstorage';
 
 class Calculator extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: "",
+            serviceType: "",
             total: '',
             typechange: "",
             type: [],
@@ -16,6 +19,7 @@ class Calculator extends Component {
             urgency: "",
             services: "",
             level: [],
+            data: {}
         }
     }
 
@@ -39,20 +43,21 @@ class Calculator extends Component {
         this.setState({ words: this.state.words - 275 })
     }
     service = (e) => {
-        // console.log(e.target.value);
+        // this.setState({ serviceType: e.target.value });
+        // console.log(serviceType);
         const datas = data.filter(number => {
             return number.id === e.target.value;
         })
         // console.log(datas);
-        datas.map(item => this.setState({ type: item.type_papers, services: item.price, level: item.academic_level }))
+        datas.map(item => this.setState({ type: item.type_papers, services: item.price, level: item.academic_level, serviceType: item.name, id: item.id }))
     }
 
     componentDidMount = () => {
         const datas = data.filter(number => {
-            return number.id === "1";
+            return number.id === 1;
         })
         // console.log(datas);
-        datas.map(item => this.setState({ type: item.type_papers, services: item.price, level: item.academic_level }))
+        datas.map(item => this.setState({ type: item.type_papers, services: item.price, level: item.academic_level, serviceType: item.name, id: item.id }))
     }
 
     render() {
@@ -61,11 +66,32 @@ class Calculator extends Component {
         const totals = +this.state.urgency + +this.state.academicLevel + +this.state.services + +this.state.typechange;
         const muly = totals * this.state.pages;
         total = muly;
+        // const dataToTypeChange = this.state.data;
+        // dataToTypeChange = this.state.typechange;
+        // console.log(dataToTypeChange.name);
+
+        const myOrder = {
+            id: this.state.id,
+            paperType: this.state.serviceType,
+            serviceType: this.state.typechange,
+            price: total,
+            level: this.state.academicLevel,
+            pages: this.state.pages,
+            words: this.state.words,
+            urgency: this.state.urgency
+        }
+        // console.log('Order:', myOrder);
+        // add(myOrder, this.state.pages);
+
+        const placeOrder = () => {
+            add(myOrder, this.state.pages);
+        }
 
         return (
             <div class="field_item field_service">
                 <label for="service_type">TYPES OF SERVICE</label>
                 <select id="service_type" onChange={(e) => this.service(e)}>
+                    <option label="Please Select"></option>
                     {data.map(item => {
                         return (
                             <option label={item.name} value={item.id} >{item.name}</option>)
@@ -133,7 +159,7 @@ class Calculator extends Component {
                 <br />
                 <div className="about_btn mt-10 d-flex justify-content-between">
                     <h3>Total : <span>{total}</span> </h3>
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <a className="thm_btn thm_btn-2" onClick={placeOrder}>Order Now<i className="fal fa-long-arrow-right"></i></a>
                 </div>
             </div>
         );
