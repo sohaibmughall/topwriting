@@ -143,7 +143,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end">
-                                        <a className="thm_btn" href="courses.html"><Link to="/cart">View all</Link><i className="fal fa-long-arrow-right"></i></a>
+                                        <a className="thm_btn" href="courses.html">View all<i className="fal fa-long-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -305,7 +305,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end mb-20">
-                                        <a className="thm_btn" href="courses.html">View all<i className="fal fa-long-arrow-right"></i></a>
+                                     <Link to="/academicPaperWriting" className="thm_btn">  View all<i className="fal fa-long-arrow-right"></i></Link> 
                                     </div>
                                 </div>
                             </div>
@@ -316,213 +316,88 @@ class Home extends Component {
                                             <img src="assets\img\course\f1.png" alt="" />
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Architecture</span>
-                                                <span className="price">$246</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">The Power of Podcast for Story telling Process</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>13 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>180</li>
-                                                <li><i className="fal fa-user"></i>28k</li>
-                                                <li><i className="fal fa-eye"></i>57k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            
+                                            <h3 className="title"><a href="course-details.html">CASE STUDY</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_02.jpg" alt="" />
+                                            <img src="assets\img\course\f2.png" alt="" />
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Engennering</span>
-                                                <span className="price">$136</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">TAntiquities Trafficking and Art Crime</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>16 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>80</li>
-                                                <li><i className="fal fa-user"></i>25k</li>
-                                                <li><i className="fal fa-eye"></i>17k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                           
+                                            <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_03.jpg" alt="" />
+                                            <img src="assets\img\course\f3.png" alt="" />
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">User Research</span>
-                                                <span className="price">$49</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">Fashion and Luxury Fashion in a Changing</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>15 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>180</li>
-                                                <li><i className="fal fa-user"></i>38k</li>
-                                                <li><i className="fal fa-eye"></i>37k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            
+                                            <h3 className="title"><a href="course-details.html">POWER POINT PRESENTATION</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_04.jpg" alt="" />
+                                            <img src="assets\img\course\f4.png" alt="" />
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Web Development</span>
-                                                <span className="price">$63</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">Making Music with Other side People</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>53 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>90</li>
-                                                <li><i className="fal fa-user"></i>98k</li>
-                                                <li><i className="fal fa-eye"></i>33k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            
+                                            <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_05.jpg" alt="" />
+                                            <img src="assets\img\course\f5.png" alt="" />
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Business Study</span>
-                                                <span className="price">$121</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">Fashion and Luxury Fashion in a Changing</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>63 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>50</li>
-                                                <li><i className="fal fa-user"></i>61k</li>
-                                                <li><i className="fal fa-eye"></i>64k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            
+                                            <h3 className="title"><a href="course-details.html">ARTICLE CRITIQUE</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_06.jpg" alt="" />
+                                            <img src="assets\img\course\f6.png" alt="" />
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Data Science</span>
-                                                <span className="price">$75</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">The Power of Podcast for Story telling Process</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>13 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>124</li>
-                                                <li><i className="fal fa-user"></i>88k</li>
-                                                <li><i className="fal fa-eye"></i>539k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                           
+                                            <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                              
                                         </div>
                                    
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-4">
-                                    <div className="crs_btn text-md-end">
-                                        <Link className="thm_btn" to="/cart">Cart<i className="fal fa-long-arrow-right"></i></Link>
-                                        
-                                    </div>
-                                </div>
+                           
                         </div>
                     </section>
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Calculator from '../../../components/calculator/calculator';
+import { Link } from 'react-router-dom';
 
 class AcademicPaperWriting extends Component {
     render() {
@@ -12,14 +13,7 @@ class AcademicPaperWriting extends Component {
                                 <div className="col-l2">
                                     <div className="page_title text-center">
                                         <h2>ACADEMICS PAPER WRITING</h2>
-                                        <nav aria-label="breadcrumb">
-                                            <ol className="breadcrumb justify-content-center">
-                                                <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
-                                                </li>
-                                                <li className="breadcrumb-item active" aria-current="page">ACADEMICS PAPER WRITING</li>
-                                            </ol>
-                                        </nav>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -44,7 +38,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">CASE STUDY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +52,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">LAB REPORT</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +66,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">POWER POINT PRESENTATION</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                             
                                             <h3 className="title">ARTICLE</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +95,9 @@ class AcademicPaperWriting extends Component {
                                            
                                             <h3 className="title">ARTICLE CRITIQUE</h3>
                                            
-                                        </div>
+                                        </div> <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat2 cat5">
@@ -104,7 +108,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">PROJECT</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +122,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">OTHERS</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +136,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">RESEARCH PAPER</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +150,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">ANNOTATED BILBLIOGRAPHY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +164,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">REACTION PAPER</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +178,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">REPORT</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -177,7 +193,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">THESIS</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +207,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">REFLECTIVE WRITING</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div> 
                                         </div>
                                     </div>
                                 </div>
@@ -201,7 +221,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">RESEARCH SUMMARY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +235,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">CRITICAL ESSAY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -225,7 +249,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">MOVIE REVIEW</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +263,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">BOOK REVIEW</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +277,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">OUTLINE</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +291,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">BOOK REPORT</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -273,7 +305,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">COURSEWORK</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -285,7 +319,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">CAPSTONE PROJECT</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -297,7 +333,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">TERM PAPER</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +347,9 @@ class AcademicPaperWriting extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">ESSAY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>

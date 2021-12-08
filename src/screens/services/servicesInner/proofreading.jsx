@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class Proofreading extends Component {
     render() {
         return (
@@ -11,14 +11,7 @@ class Proofreading extends Component {
                                 <div className="col-l2">
                                     <div className="page_title text-center">
                                         <h2>PROOFREADING</h2>
-                                        <nav aria-label="breadcrumb">
-                                            <ol className="breadcrumb justify-content-center">
-                                                <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
-                                                </li>
-                                                <li className="breadcrumb-item active" aria-current="page">PROOFREADING</li>
-                                            </ol>
-                                        </nav>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +36,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">PROJECT</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +50,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">ARTICLE CRITIQUE</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +64,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">ARTICLE</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +78,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                             
                                             <h3 className="title">LAB REPORT</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +92,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">CASE STUDY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +106,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">REFLECTIVE WRITING</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +120,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">RESEARCH SUMMARY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +134,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">CRITICAL ESSAY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +148,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">BOOK REVIEW</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +162,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">COURSEWORK</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +176,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">RESEARCH PAPAR</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +191,9 @@ class Proofreading extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">ESSAY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>

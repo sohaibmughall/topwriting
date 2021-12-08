@@ -12,14 +12,7 @@ class Assignments extends Component {
                                 <div className="col-l2">
                                     <div className="page_title text-center">
                                         <h2>ASSIGNMENTS</h2>
-                                        <nav aria-label="breadcrumb">
-                                            <ol className="breadcrumb justify-content-center">
-                                                <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
-                                                </li>
-                                                <li className="breadcrumb-item active" aria-current="page">ASSIGNMENTS</li>
-                                            </ol>
-                                        </nav>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -47,6 +40,9 @@ class Assignments extends Component {
                                                 <span className="price">$246</span>
                                             </div> */}
                                             <h3 className="title">2500 WORD ASSIGNMENTS</h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                             {/* <div className="rating_wrap ul_li">
                                                 <span>13 votes</span>
                                                 <ul className="rating_star ul_li">
@@ -78,7 +74,9 @@ class Assignments extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">3500 WORD ASSIGNMENTS</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -90,7 +88,9 @@ class Assignments extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">1500 WORD ASSIGNMENTS</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -102,7 +102,9 @@ class Assignments extends Component {
                                         <div className="course_content">
                                             
                                             <h3 className="title">2000 WORD ASSIGNMENTS</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +116,9 @@ class Assignments extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">3000 WORD ASSIGNMENTS</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
