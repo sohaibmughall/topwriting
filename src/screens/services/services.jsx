@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class Services extends Component {
     render() {
         return (
@@ -44,15 +44,15 @@ class Services extends Component {
                                 <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_01.jpg" alt="" />
+                                        <Link to="/academicPaperWriting"> <img src="assets\img\course\st._coud.png" alt="" /></Link>
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
+                                            {/* <div className="c_head">
                                                 <span className="cat">Architecture</span>
                                                 <span className="price">$246</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">The Power of Podcast for Story telling Process</a></h3>
-                                            <div className="rating_wrap ul_li">
+                                            </div> */}
+                                            <h3 className="title"><Link to="/academicPaperWriting">ACADEMICS PAPER WRITING</Link></h3>
+                                            {/* <div className="rating_wrap ul_li">
                                                 <span>13 votes</span>
                                                 <ul className="rating_star ul_li">
                                                     <li><i className="fas fa-star"></i></li>
@@ -61,8 +61,8 @@ class Services extends Component {
                                                     <li><i className="fal fa-star"></i></li>
                                                     <li><i className="fal fa-star"></i></li>
                                                 </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
+                                            </div> */}
+                                            {/* <ul className="c_bottom ul_li">
                                                 <li><i className="fal fa-file-alt"></i>180</li>
                                                 <li><i className="fal fa-user"></i>28k</li>
                                                 <li><i className="fal fa-eye"></i>57k</li>
@@ -71,181 +71,71 @@ class Services extends Component {
                                                         <img src="assets\img\course\c_author.png" alt="" />
                                                     </div>
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_02.jpg" alt="" />
+                                            <Link to="/rewriting"><img src="assets\img\course\5.png" alt="" /></Link>
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Engennering</span>
-                                                <span className="price">$136</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">TAntiquities Trafficking and Art Crime</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>16 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>80</li>
-                                                <li><i className="fal fa-user"></i>25k</li>
-                                                <li><i className="fal fa-eye"></i>17k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                           
+                                            <h3 className="title"><Link to="/rewriting">REWRITING</Link></h3>
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat1 cat3 cat5">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_03.jpg" alt="" />
+                                        <Link to="/proofreading"> <img src="assets\img\course\4.png" alt="" /></Link>
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">User Research</span>
-                                                <span className="price">$49</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">Fashion and Luxury Fashion in a Changing</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>15 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>180</li>
-                                                <li><i className="fal fa-user"></i>38k</li>
-                                                <li><i className="fal fa-eye"></i>37k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                           
+                                            <h3 className="title"><Link to="/proofreading">PROOFREADING</Link></h3>
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat1">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_04.jpg" alt="" />
+                                        <Link to="/admissionServices"><img src="assets\img\course\2.png" alt="" /></Link> 
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Web Development</span>
-                                                <span className="price">$63</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">Making Music with Other side People</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>53 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>90</li>
-                                                <li><i className="fal fa-user"></i>98k</li>
-                                                <li><i className="fal fa-eye"></i>33k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            
+                                            <h3 className="title"><Link to="/admissionServices">ADMISSION SERVICES</Link></h3>
+                                           
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat2 cat5">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_05.jpg" alt="" />
+                                        <Link to="/dissertationServices"> <img src="assets\img\course\3.png" alt="" /></Link> 
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Business Study</span>
-                                                <span className="price">$121</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">Fashion and Luxury Fashion in a Changing</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>63 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>50</li>
-                                                <li><i className="fal fa-user"></i>61k</li>
-                                                <li><i className="fal fa-eye"></i>64k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                           
+                                            <h3 className="title"><Link to="dissertationServices">DESSERTATION SERVICES</Link></h3>
+                                           
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat4 cat2">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\img_06.jpg" alt="" />
+                                        <Link to="/assignments"><img src="assets\img\course\ASSIGNMENTS.png" alt="" /></Link>
                                         </div>
                                         <div className="course_content">
-                                            <div className="c_head">
-                                                <span className="cat">Data Science</span>
-                                                <span className="price">$75</span>
-                                            </div>
-                                            <h3 className="title"><a href="course-details.html">The Power of Podcast for Story telling Process</a></h3>
-                                            <div className="rating_wrap ul_li">
-                                                <span>13 votes</span>
-                                                <ul className="rating_star ul_li">
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fas fa-star"></i></li>
-                                                    <li><i className="fal fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                            <ul className="c_bottom ul_li">
-                                                <li><i className="fal fa-file-alt"></i>124</li>
-                                                <li><i className="fal fa-user"></i>88k</li>
-                                                <li><i className="fal fa-eye"></i>539k</li>
-                                                <li>
-                                                    <div className="author">
-                                                        <img src="assets\img\course\c_author.png" alt="" />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                           
+                                            <h3 className="title"><Link to="/assignments">ASSIGNMENTS</Link></h3>
+                                            
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2">
+                                {/* <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
                                             <img src="assets\img\course\img_07.jpg" alt="" />
@@ -278,8 +168,8 @@ class Services extends Component {
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat1 cat3 cat5">
+                                </div> */}
+                                {/* <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat1 cat3 cat5">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
                                             <img src="assets\img\course\img_08.jpg" alt="" />
@@ -312,8 +202,8 @@ class Services extends Component {
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat1 cat5">
+                                </div> */}
+                                {/* <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat1 cat5">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
                                             <img src="assets\img\course\img_09.jpg" alt="" />
@@ -346,15 +236,15 @@ class Services extends Component {
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-12">
                                     <div className="load_more_btn text-center pt-10">
                                         <a className="thm_btn thm_btn-white" href="courses.html">Load More <i className="ti-plus"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </section>
 
