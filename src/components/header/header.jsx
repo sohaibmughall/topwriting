@@ -29,7 +29,7 @@ class Header extends Component {
                         <div className="row align-items-center">
                             <div className="col-xl-2 col-lg-2 col-6">
                                 <div className="logo">
-                                    <a href="index.html"><img src="assets\img\logo\logo.png" alt="" /></a>
+                                   <Link to="/home"><img src="assets\img\logo\logo.png" alt="" /></Link> 
                                 </div>
                             </div>
                             <div className="col-xl-7 col-lg-8 d-none d-lg-block">

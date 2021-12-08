@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class Admissionservices extends Component {
     render() {
         return (
@@ -11,14 +11,7 @@ class Admissionservices extends Component {
                                 <div className="col-l2">
                                     <div className="page_title text-center">
                                         <h2>ADMISSION SERVICES</h2>
-                                        <nav aria-label="breadcrumb">
-                                            <ol className="breadcrumb justify-content-center">
-                                                <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
-                                                </li>
-                                                <li className="breadcrumb-item active" aria-current="page">ADMISSION SERVICES</li>
-                                            </ol>
-                                        </nav>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -43,6 +36,9 @@ class Admissionservices extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">ADMISSION ESSAY</h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                            
                                         </div>
                                     </div>
@@ -55,7 +51,9 @@ class Admissionservices extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">PERSONAL STATEMENT</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +65,9 @@ class Admissionservices extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">RESEARCH PROPOSAL</h3>
-                                            
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +79,9 @@ class Admissionservices extends Component {
                                         <div className="course_content">
                                             
                                             <h3 className="title">SCHOLARSHIP ESSAY</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +93,9 @@ class Admissionservices extends Component {
                                         <div className="course_content">
                                            
                                             <h3 className="title">POWER POINT PRESENTATION</h3>
-                                           
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
