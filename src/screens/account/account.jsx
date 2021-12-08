@@ -1,6 +1,65 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
 class Account extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: "dasdas",
+            email: "ddddsdd@example.com",
+            pass: "12345678",
+        }
+    }
+
+    login = () => {
+        var data = new FormData();
+        data.append('email', this.state.email);
+        data.append('password', this.state.pass);
+        var config = {
+            method: 'post',
+            url: 'http://192.168.18.10/api/login',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            data: data
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }
+    registor = () => {
+        var data = new FormData();
+        data.append('email', this.state.email);
+        data.append('password', this.state.pass);
+        data.append('name', this.state.name);
+        var config = {
+            method: 'post',
+            url: 'http://192.168.18.10/api/add',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            data: data
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+    }
+
+
+
+
     render() {
         return (
             <>
@@ -31,30 +90,29 @@ class Account extends Component {
                                 <div className="col-lg-6">
                                     <div className="account_wrap">
                                         <h3 className="title">Login your Account</h3>
-                                        <form action="#">
-                                            <input type="email" placeholder="Your Email" />
-                                            <input type="password" placeholder="Password" />
-                                            <button className="thm_btn" type="submit">Login Now</button>
-                                            <div className="action ul_li">
-                                                <span className="left">
-                                                    <input id="remember" type="checkbox" />
-                                                    <label for="remember">Remember me</label>
-                                                </span>
-                                                <span className="right">
-                                                    <span>Don’t have an account<a href="#">Sign up</a></span>
-                                                </span>
-                                            </div>
-                                        </form>
+                                        <input type="email" placeholder="Your Email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                                        <input type="password" placeholder="Password" value={this.state.pass} onChange={(e) => this.setState({ pass: e.target.value })} />
+                                        <button className="thm_btn" onClick={() => this.login()}>Login Now</button>
+                                        <div className="action ul_li">
+                                            <span className="left">
+                                                <input id="remember" type="checkbox" />
+                                                <label for="remember">Remember me</label>
+                                            </span>
+                                            <span className="right">
+                                                <span>Don’t have an account<a href="#">Sign up</a></span>
+                                            </span>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="account_wrap">
                                         <h3 className="title">Sign up your Account</h3>
-                                        <form action="#">
-                                            <input type="text" placeholder="Your Name" />
-                                            <input type="email" placeholder="Your Email" />
-                                            <input type="password" placeholder="Password" />
-                                            <button className="thm_btn" type="submit">Sign up Now</button>
+                                  
+                                            <input type="text" placeholder="Your Name" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
+                                            <input type="email" placeholder="Your Email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                                            <input type="password" placeholder="Password" value={this.state.pass} onChange={(e) => this.setState({ pass: e.target.value })} />
+                                            <button className="thm_btn" onClick={() => this.registor()}>Sign up Now</button>
                                             <div className="action ul_li">
                                                 <span className="left">
                                                     <input id="remember2" type="checkbox" />
@@ -64,7 +122,7 @@ class Account extends Component {
                                                     <span>Already have an accout<a href="#">Login</a></span>
                                                 </span>
                                             </div>
-                                        </form>
+                                     
                                     </div>
                                 </div>
                             </div>
