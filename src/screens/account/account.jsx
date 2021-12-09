@@ -15,7 +15,7 @@ class Account extends Component {
         const data = new FormData();
         data.append('email', this.state.email);
         data.append('password', this.state.pass);
-        const options = { headers: { 'Content-Type': 'application/json' } }
+        const options = { headers: { 'Content-Type': 'application/json' ,} }
         axios.post('http://192.168.18.10/api/login', data, options).then(
             function (response) {
                 console.log(response.data);
@@ -29,7 +29,7 @@ class Account extends Component {
         data.append('password', this.state.pass);
         data.append('name', this.state.name);
         const options = { headers: { 'Content-Type': 'application/json' } }
-        axios.post('http://192.168.18.10/api/add', data, options).then(
+        axios.post('http://192.168.18.10/api/register', data, options).then(
             function (response) {
                 console.log(response.data);
             }
