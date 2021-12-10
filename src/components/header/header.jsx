@@ -35,7 +35,7 @@ class Header extends Component {
                             <div className="col-xl-7 col-lg-8 d-none d-lg-block">
                                 <nav className="main_menu">
                                     <ul>
-                                        <li className="active"><a href="/">Home</a></li>
+                                        <li className="active"><a href="/home">Home</a></li>
                                         <li className="has_dropdown">
                                             <Link to='/services'>Services</Link>
                                             <ul className="submenu">

@@ -478,73 +478,109 @@ class Home extends Component {
                     </section>
 
                     <section className="team_area pt-110 pb-90">
-                        <div className="container">
+                    <div className="container">
                             <div className="row align-items-center mb-15">
                                 <div className="col-lg-8 col-md-8">
                                     <div className="sec_title">
-                                        <h2>Featured Instructors</h2>
+                                        <h2>REWRITING</h2>
                                         <p>Online learning offers a new way to explore subjects you’re passionate about.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end mb-20">
-                                        <a className="thm_btn" href="team.html">View all<i className="fal fa-long-arrow-right"></i></a>
+                                     <Link to="/rewriting" className="thm_btn">  View all<i className="fal fa-long-arrow-right"></i></Link> 
                                     </div>
                                 </div>
                             </div>
-                            <div className="row justify-content-md-center">
+                            <div className="row">
                                 <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_01.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\f1.png" alt="" />
                                         </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Mohammad Wasim</a></h3>
-                                            <p>Web Developer</p>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">CASE STUDY</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_02.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\f2.png" alt="" />
                                         </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Yalina De Demandy</a></h3>
-                                            <p>Architecture Specialistr</p>
+                                        <div className="course_content">
+                                           
+                                            <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_03.jpg" alt="" />
-                                            <div className="team_social social_icon">
-                                                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i className="fab fa-twitter"></i></a>
-                                                <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                                                <a href="#"><i className="fab fa-instagram"></i></a>
-                                            </div>
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\f3.png" alt="" />
                                         </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Rasalina de willamson</a></h3>
-                                            <p>Software Enginner</p>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">POWER POINT PRESENTATION</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\f4.png" alt="" />
+                                        </div>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\f5.png" alt="" />
+                                        </div>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">ARTICLE CRITIQUE</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\f6.png" alt="" />
+                                        </div>
+                                        <div className="course_content">
+                                           
+                                            <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
+                                             
+                                        </div>
+                                   
                                     </div>
                                 </div>
                             </div>
+                           
                         </div>
                     </section>
 

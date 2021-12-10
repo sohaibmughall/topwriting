@@ -11,66 +11,13 @@ class About extends Component {
                                 <div className="col-l2">
                                     <div className="page_title text-center">
                                         <h2>About us</h2>
-                                        <nav aria-label="breadcrumb">
-                                            <ol className="breadcrumb justify-content-center">
-                                                <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
-                                                </li>
-                                                <li className="breadcrumb-item active" aria-current="page">About us</li>
-                                            </ol>
-                                        </nav>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section className="counter_area counter_2 pt-120 pb-70">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="coun_wrap">
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_01.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>146<span>+</span></h2>
-                                                <p>Award Winning</p>
-                                            </div>
-                                        </div>
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_02.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>28k<span>+</span></h2>
-                                                <p>Total Student</p>
-                                            </div>
-                                        </div>
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_03.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>138<span>+</span></h2>
-                                                <p>Total instructors</p>
-                                            </div>
-                                        </div>
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_04.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>214<span>+</span></h2>
-                                                <p>over the world</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                   <br /><br /><br /> <br />
 
                     <section className="about_area about_2 pb-70">
                         <div className="container">
@@ -88,56 +35,22 @@ class About extends Component {
                                 <div className="col-lg-6">
                                     <div className="about_content mb-30">
                                         <div className="sec_title">
-                                            <h2>We are turitor an online learning community.</h2>
-                                            <p>At Turitor, we believe everyone should have the opportunity to create progress
-                                                through technology and develop the skills of tomorrow. With assessments,
-                                                learning paths and courses authored by industry experts</p>
-                                        </div>
-                                        <div className="about_tab mb-30">
-                                            <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                                <li className="nav-item" role="presentation">
-                                                    <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Our Mission</button>
-                                                </li>
-                                                <li className="nav-item" role="presentation">
-                                                    <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Our Vision</button>
-                                                </li>
-                                                <li className="nav-item" role="presentation">
-                                                    <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Our Values</button>
-                                                </li>
-                                            </ul>
-                                            <div className="tab-content" id="myTabContent">
-                                                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">we believe everyone should have the opportunity
-                                                    to create progress through technology and develop the skills of tomorrow
-                                                </div>
-                                                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">we believe everyone should have the
-                                                    opportunity to create progress through technology and develop the skills of
-                                                    tomorrow</div>
-                                                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">we believe everyone should have the
-                                                    opportunity to create progress through technology and develop the skills of
-                                                    tomorrow</div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span><i className="fal fa-check"></i>Expert Trainer</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span><i className="fal fa-check"></i>Remote Learning</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span><i className="fal fa-check"></i>Lifetime Access</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span><i className="fal fa-check"></i>Self Developmentr</span>
-                                                </div>
-                                            </div>
+                                           
+                                            <p>We are a UK-based service that serves the writing needs of college and university students. We understand that it can be tough for students to catch up with the lectures and tests with assignments coming on top. Rather than trailing after the deadlines, students can avail our services and focus on their lectures and exams while sorting out their upcoming timetable.<br/>
+
+We take pride in our 100 percent satisfaction rate and guarantee that you will not be disappointed with the paper you receive. We offer one revision to all of our customers and more in special circumstances.  However, we request not to demand a complete overhaul of a paper just because you changed our mind. If you have a fair demand of a revision, we will cater to that for sure.</p>
+                                        <br /><br />
+                                        <h2>Top Writing team</h2>
+                                        <p>We have a valued team of experts that remain the backbone of this whole enterprise. We enable you to directly communicate your requirements and concerns about an assignment to our team. We take due care in assigning the writer to a specific task to render optimal performance and efficiency. <br/>
+
+We have a due procedure of selection for writers and ensure that they are the right choice for the writing task. We have put in place specific steps to assess the writer’s capabilities and skills before inducting one into our team. The writer further undergoes the verification process before getting to work on the clients’ tasks.</p>
+<br /><br />
+<h2></h2>
+<p>
+We have faith in our writers and our service. So we feel positive that you'll be 100% happy with the paper you receive. But being a dedicated company, we never take anything for granted. Therefore we offer the following guarantee: if you are at all dissatisfied with any aspect of your paper, then we will revise it for free.<br/>
+We only ask that you be fair and don't ask for a complete rewrite simply because you've changed your mind about what you want the paper to include.
+</p>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -145,91 +58,9 @@ class About extends Component {
                         </div>
                     </section>
 
-                    <section className="video_area pb-110">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="video_wrap pos-rel">
-                                        <div className="video_thumb">
-                                            <img src="assets\img\bg\video_bg_01.jpg" alt="" />
-                                        </div>
-                                        <a className="popup-video video_icon" href="https://www.youtube.com/watch?v=cRXm1p-CNyk"><i className="fal fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="team_area pb-90">
-                        <div className="container">
-                            <div className="row align-items-center mb-15">
-                                <div className="col-lg-8 col-md-8">
-                                    <div className="sec_title">
-                                        <h2>Featured Instructors</h2>
-                                        <p>Online learning offers a new way to explore subjects you’re passionate about.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-4">
-                                    <div className="crs_btn text-md-end mb-20">
-                                        <a className="thm_btn" href="team.html">View all<i className="fal fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row justify-content-md-center">
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_01.jpg" alt="" />
-                                            <div className ="team_social social_icon">
-                                            <a href="#"><i className ="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className ="fab fa-twitter"></i></a>
-                                            <a href="#"><i className ="fab fa-google-plus-g"></i></a>
-                                            <a href="#"><i className ="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Mohammad Wasim</a></h3>
-                                            <p>Web Developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_02.jpg" alt="" />
-                                            <div className ="team_social social_icon">
-                                            <a href="#"><i className ="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className ="fab fa-twitter"></i></a>
-                                            <a href="#"><i className ="fab fa-google-plus-g"></i></a>
-                                            <a href="#"><i className ="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Yalina De Demandy</a></h3>
-                                            <p>Architecture Specialistr</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="team_single text-center mb-30">
-                                        <div className="team_thumb">
-                                            <img src="assets\img\team\team_03.jpg" alt="" />
-                                            <div className ="team_social social_icon">
-                                            <a href="#"><i className ="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className ="fab fa-twitter"></i></a>
-                                            <a href="#"><i className ="fab fa-google-plus-g"></i></a>
-                                            <a href="#"><i className ="fab fa-instagram"></i></a>
-                                            </div>
-                                        </div>
-                                        <div className="team_text">
-                                            <h3><a href="team-details.html">Rasalina de willamson</a></h3>
-                                            <p>Software Enginner</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                   <br />
+                   <br />
+                   <br />
 
                     <section className="bai_area bai_bootom_space">
                         <div className="container">

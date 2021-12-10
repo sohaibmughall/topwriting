@@ -986,7 +986,7 @@ textarea:focus {
 .masonry_active button:hover,
 .masonry_active button.active {
     color: #fff;
-    background-color: #0073ff;
+    background-color: #000;
     border-color: transparent;
 }
 

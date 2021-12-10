@@ -17,15 +17,14 @@ class Account extends Component {
         data.append('password', this.state.pass);
         var config = {
             method: 'post',
-            url: 'http://192.168.18.10/api/login',
+            url: 'http://192.168.18.10/topwriting-backend/public/api/login',
             headers: {
                 "Content-Type": "application/json"
             },
             data: data
         };
-
         axios(config)
-            .then(function (response) {
+            .then(function (response) { 
                 console.log(JSON.stringify(response.data));
             })
             .catch(function (error) {
@@ -70,14 +69,6 @@ class Account extends Component {
                                 <div className="col-l2">
                                     <div className="page_title text-center">
                                         <h2>My Account</h2>
-                                        <nav aria-label="breadcrumb">
-                                            <ol className="breadcrumb justify-content-center">
-                                                <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
-                                                </li>
-                                                <li className="breadcrumb-item active" aria-current="page">Account</li>
-                                            </ol>
-                                        </nav>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +99,6 @@ class Account extends Component {
                                 <div className="col-lg-6">
                                     <div className="account_wrap">
                                         <h3 className="title">Sign up your Account</h3>
-                                  
                                             <input type="text" placeholder="Your Name" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
                                             <input type="email" placeholder="Your Email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
                                             <input type="password" placeholder="Password" value={this.state.pass} onChange={(e) => this.setState({ pass: e.target.value })} />

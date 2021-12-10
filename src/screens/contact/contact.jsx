@@ -11,14 +11,6 @@ class Contact extends Component {
                                 <div className="col-l2">
                                     <div className="page_title text-center">
                                         <h2>Get In Touch</h2>
-                                        <nav aria-label="breadcrumb">
-                                            <ol className="breadcrumb justify-content-center">
-                                                <li className="breadcrumb-item">
-                                                    <a href="index.html">Home</a>
-                                                </li>
-                                                <li className="breadcrumb-item active" aria-current="page">Contact</li>
-                                            </ol>
-                                        </nav>
                                     </div>
                                 </div>
                             </div>
