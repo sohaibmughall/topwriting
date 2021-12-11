@@ -133,118 +133,109 @@ class Home extends Component {
                     </section>
 
                     <section className="courses_cat_area pt-110 pb-120">
-                        <div className="container">
-                            <div className="row align-items-center mb-25">
+                    <div className="container">
+                            <div className="row align-items-center mb-15">
                                 <div className="col-lg-8 col-md-8">
                                     <div className="sec_title">
-                                        <h2>Recent Popular Subjects </h2>
+                                        <h2>PROOFREADING</h2>
                                         <p>Online learning offers a new way to explore subjects you’re passionate about.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-4">
-                                    <div className="crs_btn text-md-end">
-                                        <a className="thm_btn" href="courses.html">View all<i className="fal fa-long-arrow-right"></i></a>
+                                    <div className="crs_btn text-md-end mb-20">
+                                     <Link to="/proofreading" className="thm_btn">  View all<i className="fal fa-long-arrow-right"></i></Link> 
                                     </div>
                                 </div>
                             </div>
-                            <div className="row g-0">
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_01.png" alt="" />
+                            <div className="row">
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\c1.png" alt="" />
                                         </div>
-                                        <h3><a href="courses.html">Computer Science</a></h3>
-                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor.</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_02.png" alt="" />
-                                        </div>
-                                        <h3><a href="courses.html">Web Development</a></h3>
-                                        <p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuntey.</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_03.png" alt="" />
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\c2.png" alt="" />
                                         </div>
-                                        <h3><a href="courses.html">Business Study</a></h3>
-                                        <p>Terem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incey</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_04.png" alt="" />
-                                        </div>
-                                        <h3><a href="courses.html">Data Science</a></h3>
-                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, do eiusmod tempor.</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
+                                        <div className="course_content">
+                                           
+                                            <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_05.png" alt="" />
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\c3.png" alt="" />
                                         </div>
-                                        <h3><a href="courses.html">Enginnering</a></h3>
-                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididey.</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_06.png" alt="" />
-                                        </div>
-                                        <h3><a href="courses.html">User Experience</a></h3>
-                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididey.</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">POWER POINT PRESENTATION</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_07.png" alt="" />
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\c4.png" alt="" />
                                         </div>
-                                        <h3><a href="courses.html">Psychology</a></h3>
-                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor incididey.</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="ct_single">
-                                        <div className="ser_thumb mb-25">
-                                            <img src="assets\img\icon\s_08.png" alt="" />
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\c5.png" alt="" />
                                         </div>
-                                        <h3><a href="courses.html">Architecture Planing</a></h3>
-                                        <p>Rorem ipsum dolor sit amet, consectetur adipisicing elit, seddo eiusmod tempor.</p>
-                                        <div className="ser_icon pt-25">
-                                            <a href="courses.html"><i className="fal fa-long-arrow-right"></i></a>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">ARTICLE CRITIQUE</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\c6.png" alt="" />
+                                        </div>
+                                        <div className="course_content">
+                                           
+                                            <h3 className="title"><a href="course-details.html">REFLECTIVE WRITING</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
+                                             
+                                        </div>
+                                   
                                     </div>
                                 </div>
                             </div>
+                           
                         </div>
                     </section>
 
@@ -496,11 +487,11 @@ class Home extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\f1.png" alt="" />
+                                            <img src="assets\img\course\d1.png" alt="" />
                                         </div>
                                         <div className="course_content">
                                             
-                                            <h3 className="title"><a href="course-details.html">CASE STUDY</a></h3>
+                                            <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
                     <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
@@ -510,11 +501,11 @@ class Home extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\f2.png" alt="" />
+                                            <img src="assets\img\course\d2.png" alt="" />
                                         </div>
                                         <div className="course_content">
                                            
-                                            <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
+                                            <h3 className="title"><a href="course-details.html">REACTION PAPER</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
                     <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
@@ -524,11 +515,11 @@ class Home extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\f3.png" alt="" />
+                                            <img src="assets\img\course\d3.png" alt="" />
                                         </div>
                                         <div className="course_content">
                                             
-                                            <h3 className="title"><a href="course-details.html">POWER POINT PRESENTATION</a></h3>
+                                            <h3 className="title"><a href="course-details.html">ANNOTATED BILBLIOGRAPHY</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
                     <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
@@ -538,21 +529,7 @@ class Home extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\f4.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            
-                                            <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
-                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\f5.png" alt="" />
+                                            <img src="assets\img\course\d4.png" alt="" />
                                         </div>
                                         <div className="course_content">
                                             
@@ -566,11 +543,25 @@ class Home extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="course_single mb-30">
                                         <div className="c_thumb">
-                                            <img src="assets\img\course\f6.png" alt="" />
+                                            <img src="assets\img\course\d5.png" alt="" />
+                                        </div>
+                                        <div className="course_content">
+                                            
+                                            <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
+                                            <div className="about_btn mt-10 d-flex justify-content-between">
+                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="course_single mb-30">
+                                        <div className="c_thumb">
+                                            <img src="assets\img\course\d6.png" alt="" />
                                         </div>
                                         <div className="course_content">
                                            
-                                            <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
+                                            <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
                     <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
