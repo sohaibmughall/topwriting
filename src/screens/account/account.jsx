@@ -15,8 +15,15 @@ class Account extends Component {
         const data = new FormData();
         data.append('email', this.state.email);
         data.append('password', this.state.pass);
-        const options = { headers: { 'Accept': 'application/json' ,} }
-        axios.post('http://192.168.18.10/api/login', data, options).then(
+        const options = {
+            headers: {
+                'Content-Type': 'application/json',
+                // 'Access-Control-Allow-Origin': '*',
+                // 'Connection': 'keep-alive'
+
+            }
+        }
+        axios.post('http://192.168.18.10/topwriting-backend/public/api/login', data, options).then(
             function (response) {
                 console.log(response.data);
             }
@@ -29,7 +36,7 @@ class Account extends Component {
         data.append('password', this.state.pass);
         data.append('name', this.state.name);
         const options = { headers: { 'Content-Type': 'application/json' } }
-        axios.post('http://192.168.18.10/api/register', data, options).then(
+        axios.post('http://192.168.18.10/topwriting-backend/public/api/register', data, options).then(
             function (response) {
                 console.log(response.data);
             }
