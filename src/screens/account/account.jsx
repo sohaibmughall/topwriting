@@ -12,9 +12,10 @@ class Account extends Component {
     }
 
     login = () => {
-        var data = new FormData();
+        const data = new FormData();
         data.append('email', this.state.email);
         data.append('password', this.state.pass);
+<<<<<<< HEAD
         var config = {
             method: 'post',
             url: 'http://192.168.18.10/topwriting-backend/public/api/login',
@@ -30,29 +31,27 @@ class Account extends Component {
             .catch(function (error) {
                 console.log(error);
             });
+=======
+        const options = { headers: { 'Content-Type': 'application/json' ,} }
+        axios.post('http://192.168.18.10/api/login', data, options).then(
+            function (response) {
+                console.log(response.data);
+            }
+        )
+>>>>>>> 6b7fb7ce6e065b4afa38e3c00eb4e755f539e66e
 
     }
     registor = () => {
-        var data = new FormData();
+        const data = new FormData();
         data.append('email', this.state.email);
         data.append('password', this.state.pass);
         data.append('name', this.state.name);
-        var config = {
-            method: 'post',
-            url: 'http://192.168.18.10/api/add',
-            headers: {
-                "Content-Type": "application/json"
-            },
-            data: data
-        };
-
-        axios(config)
-            .then(function (response) {
-                console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        const options = { headers: { 'Content-Type': 'application/json' } }
+        axios.post('http://192.168.18.10/api/register', data, options).then(
+            function (response) {
+                console.log(response.data);
+            }
+        )
 
     }
 
@@ -99,6 +98,7 @@ class Account extends Component {
                                 <div className="col-lg-6">
                                     <div className="account_wrap">
                                         <h3 className="title">Sign up your Account</h3>
+<<<<<<< HEAD
                                             <input type="text" placeholder="Your Name" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
                                             <input type="email" placeholder="Your Email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
                                             <input type="password" placeholder="Password" value={this.state.pass} onChange={(e) => this.setState({ pass: e.target.value })} />
@@ -113,6 +113,23 @@ class Account extends Component {
                                                 </span>
                                             </div>
                                      
+=======
+
+                                        <input type="text" placeholder="Your Name" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
+                                        <input type="email" placeholder="Your Email" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                                        <input type="password" placeholder="Password" value={this.state.pass} onChange={(e) => this.setState({ pass: e.target.value })} />
+                                        <button className="thm_btn" onClick={() => this.registor()}>Sign up Now</button>
+                                        <div className="action ul_li">
+                                            <span className="left">
+                                                <input id="remember2" type="checkbox" />
+                                                <label for="remember2">Remember me</label>
+                                            </span>
+                                            <span className="right">
+                                                <span>Already have an accout<a href="#">Login</a></span>
+                                            </span>
+                                        </div>
+
+>>>>>>> 6b7fb7ce6e065b4afa38e3c00eb4e755f539e66e
                                     </div>
                                 </div>
                             </div>
