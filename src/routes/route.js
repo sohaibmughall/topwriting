@@ -18,7 +18,6 @@ import Dissertationservices from '../screens/services/servicesInner/dissertation
 import Proofreading from '../screens/services/servicesInner/proofreading';
 import Rewriting from '../screens/services/servicesInner/rewriting';
 import Writers from '../screens/writers/writers';
-import Writemyessay from '../screens/footersection/services/writemyessay';
 import Wmdessertation from '../screens/footersection/services/writemydessertation';
 import Assignmentwriter from '../screens/footersection/services/AssignmentWriter';
 import Lawessay from '../screens/footersection/services/LawEssay';
@@ -27,7 +26,6 @@ import Hrmessat from '../screens/footersection/services/HRMEssay';
 import Literaturereview from '../screens/footersection/services/LiteratureReview';
 import Termofservice from '../screens/footersection/services/TermsofService';
 import Refundpolicy from '../screens/footersection/services/Refundpolicy';
-import writemyessay from '../screens/footersection/services/writemyessay';
 import writemydessertation from '../screens/footersection/services/writemydessertation';
 import AssignmentWriter from '../screens/footersection/services/AssignmentWriter';
 import LawEssay from '../screens/footersection/services/LawEssay';
@@ -65,6 +63,7 @@ import Pages from '../components/pages/pages';
 import Linkpages from '../screens/footerlinks/linkpages';
 import Footerdata from '../components/footer/footerdata';
 import Cart from '../screens/cart/cart';
+import Ordernow from '../screens/Order Now/ordernow';
 export default class route extends Component {
     render() {
         return (
@@ -77,13 +76,13 @@ export default class route extends Component {
                         <Route exact path='/writers' component={Writers} />
                         <Route exact path='/account' component={Account}/>
                         <Route exact path='/services' component={Services}/>
+                        <Route exact path='/ordernow' component={Ordernow} />
                         <Route exact path='/academicPaperWriting' component={AcademicPaperWriting}/>
                         <Route exact path='/rewriting' component={Rewriting}/>
                         <Route exact path='/proofreading' component={Proofreading}/>
                         <Route exact path='/admissionServices' component={Admissionservices}/>
                         <Route exact path='/dissertationServices' component={Dissertationservices}/>
                         <Route exact path='/assignments' component={Assignments}/>
-                        <Route exact path='/writemyessay' component={writemyessay}/>
                         <Route exact path='/writemydessertation' component={writemydessertation}/>
                         <Route exact path='/assignmentwriter' component={AssignmentWriter}/>
                         <Route exact path='/lawessay' component={LawEssay}/>
@@ -115,7 +114,6 @@ export default class route extends Component {
                         <Route exact path='/privacypolicy' component={PrivacyPolicy}/>
                         <Route exact path='/faqs' component={Faqs}/>
                         <Route exact path='/termoc' component={TermandCondition}/>
-                        <Route exact path='/writemyessay' component={Linkpages}/>
                         <Route exact path='/cart' component={Cart}/>
 
                         

@@ -33,6 +33,11 @@ We help students from all over Great Britain including London, Manchester, Glasg
 Well, that’s the best question, because you will find that a lot of them don’t employ British writers, and some of them don’t even know how to write a dissertation.
 
 But that’s ok because you’ve already found the best online website for dissertation writing help. That is, of course, UK Writings – the only place to go if you want to say do my dissertation for me.</p>
+
+<section className="page_title_area" >
+                        <img src="assets/img/sab.png" alt="" />
+                    </section>
+
 <br /> <br />
 <h2>Why Is It So Difficult for Students to Do Dissertations?</h2>
 <p>Writing your dissertation is no easy task even if you have all of the time in the world. But there are only 24 hours in the day and there is so much more to do than just write a dissertation. It’s not like school or college where studying is all you have to do and many students find it hard to fit everything in.

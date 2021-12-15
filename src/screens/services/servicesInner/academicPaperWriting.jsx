@@ -39,8 +39,8 @@ class AcademicPaperWriting extends Component {
                                            
                                             <h3 className="title">CASE STUDY</h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
-                </div>
+                                                <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

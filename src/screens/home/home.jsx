@@ -157,7 +157,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@ class Home extends Component {
                                            
                                             <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">POWER POINT PRESENTATION</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -199,7 +199,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                   <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -213,7 +213,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">ARTICLE CRITIQUE</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -227,7 +227,7 @@ class Home extends Component {
                                            
                                             <h3 className="title"><a href="course-details.html">REFLECTIVE WRITING</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                              
                                         </div>
@@ -310,7 +310,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">CASE STUDY</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -324,7 +324,7 @@ class Home extends Component {
                                            
                                             <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -338,7 +338,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">POWER POINT PRESENTATION</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -352,7 +352,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -366,7 +366,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">ARTICLE CRITIQUE</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -380,7 +380,7 @@ class Home extends Component {
                                            
                                             <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                              
                                         </div>
@@ -493,7 +493,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">PROJECT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -507,7 +507,7 @@ class Home extends Component {
                                            
                                             <h3 className="title"><a href="course-details.html">REACTION PAPER</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -521,7 +521,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">ANNOTATED BILBLIOGRAPHY</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -535,7 +535,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">ARTICLE CRITIQUE</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -549,7 +549,7 @@ class Home extends Component {
                                             
                                             <h3 className="title"><a href="course-details.html">ARTICLE</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                         </div>
                                     </div>
@@ -563,7 +563,7 @@ class Home extends Component {
                                            
                                             <h3 className="title"><a href="course-details.html">LAB REPORT</a></h3>
                                             <div className="about_btn mt-10 d-flex justify-content-between">
-                    <Link to="/cart" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
+                    <Link to="/ordernow" className="thm_btn thm_btn-2">Order Now<i className="fal fa-long-arrow-right"></i></Link>
                 </div>
                                              
                                         </div>

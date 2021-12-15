@@ -1,6 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
 class Services extends Component {
+
+    constructor(props){
+        super(props);
+        console.log("Hello I am a constructor")
+        this.state =  {
+       collection:[]
+       }
+    }
+
+    async componentDidMount(){
+        const data = new FormData();
+        const th= this
+        const options = { headers: { 'Content-Type': 'application/json' } }
+       await axios.get('http://192.168.0.101/api/pro', data, options).then(
+            function (response) {
+                th.setState({
+                    collection:response.data
+                })
+            }
+        )
+    }
+
     render() {
         return (
             <div>
@@ -19,7 +42,7 @@ class Services extends Component {
 
                     <section className="courses_area pt-120 pb-120">
                         <div className="container">
-                            <div className="row">
+                           ` ` <div className="row">
                                 <div className="col-12">
                                     <div className="masonry_active mb-40">
                                         <button className="active" data-filter="*"> all Services</button>
@@ -33,66 +56,21 @@ class Services extends Component {
                                 </div>
                             </div>
                             <div className="row grid">
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                        <Link to="/academicPaperWriting"> <img src="assets\img\course\st._coud.png" alt="" /></Link>
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title"><Link to="/academicPaperWriting">ACADEMICS PAPER WRITING</Link></h3>   
-                                        </div>
+                            {this.state.collection.map((element)=>{
+                                        return <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
+                                    <div className="course_single mb-30"> 
+                                     <div className="c_thumb">
+                                            <Link to="/academicPaperWriting"> <img src={`http://192.168.0.101/image/product/${element.image}`} alt="" /></Link>
                                     </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat2">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <Link to="/rewriting"><img src="assets\img\course\5.png" alt="" /></Link>
-                                        </div>
-                                        <div className="course_content">
-                                           <h3 className="title"><Link to="/rewriting">REWRITING</Link></h3>
-                                        </div>
+                                    <div className="course_content">
+                                        <h3 className="title"><Link to="/academicPaperWriting">{element.name}</Link></h3>   
                                     </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat4 cat1 cat3 cat5">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                        <Link to="/proofreading"> <img src="assets\img\course\4.png" alt="" /></Link>
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title"><Link to="/proofreading">PROOFREADING</Link></h3>
-                                        </div>
+                                        
+                                   
+                                        
                                     </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat1">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                        <Link to="/admissionServices"><img src="assets\img\course\2.png" alt="" /></Link> 
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title"><Link to="/admissionServices">ADMISSION SERVICES</Link></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat2 cat5">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                        <Link to="/dissertationServices"> <img src="assets\img\course\3.png" alt="" /></Link> 
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title"><Link to="/dissertationServices">DESSERTATION SERVICES</Link></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat3 cat4 cat2">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                        <Link to="/assignments"><img src="assets\img\course\ASSIGNMENTS.png" alt="" /></Link>
-                                        </div>
-                                        <div className="course_content">
-                                           <h3 className="title"><Link to="/assignments">ASSIGNMENTS</Link></h3>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div> })}
+                               
                             </div>
                         </div>
                     </section>
