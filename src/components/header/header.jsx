@@ -1,7 +1,37 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from "axios";
+import { baseurl } from "../../components/Apiurl/apiurl";
 
 class Header extends Component {
+
+    constructor(props){
+        super(props);
+        this.state={
+            all:[]
+        }
+    }
+
+    async componentDidMount() {
+        const data = new FormData();
+        const th = this;
+        const options = { headers: { "Content-Type": "application/json" } };
+        await axios
+          .get(`${baseurl}/allcollection`,
+            data,
+            options
+          )
+          .then(function (response) {
+            console.log(response.data.all)
+            response.data.map((item) =>
+              th.setState({
+                all: response.data
+              })
+            );
+          });
+      }
+
+
     render() {
         return (
             <header className="header_area">
@@ -29,34 +59,22 @@ class Header extends Component {
                         <div className="row align-items-center">
                             <div className="col-xl-2 col-lg-2 col-6">
                                 <div className="logo">
-                                   <Link to="/home"><img src="assets\img\logo\logo.png" alt="" /></Link> 
+                                   <Link to="/"><img src="assets\img\logo\logo.png" alt="" /></Link> 
                                 </div>
                             </div>
                             <div className="col-xl-7 col-lg-8 d-none d-lg-block">
                                 <nav className="main_menu">
                                     <ul>
-                                        <li className="active"><a href="/home">Home</a></li>
+                                        <li className="active"><a href="/">Home</a></li>
                                         <li className="has_dropdown">
                                             <Link to='/services'>Services</Link>
                                             <ul className="submenu">
+                                            {this.state.all.map((element) => {
+                    return (
                                                 <li className="d-flex">
-                                                    <Link to='/academicPaperWriting'>Academic Paper Writing</Link>
+                                                    <Link to={`/products/${element.id}`}>{element.name}</Link>
                                                 </li>
-                                                <li className="d-flex">
-                                                    <Link to='/rewriting'>Rewriting</Link>
-                                                </li>
-                                                <li className="d-flex">
-                                                    <Link to='/proofreading'>Proofreading</Link>
-                                                </li>
-                                                <li className="d-flex">
-                                                    <Link to='/admissionServices'>Admission Services</Link>
-                                                </li>
-                                                <li className="d-flex">
-                                                    <Link to='/dissertationServices'>Dissertation Services</Link>
-                                                </li>
-                                                <li className="d-flex">
-                                                    <Link to='/assignments'>Assignments</Link>
-                                                </li>
+                    )})}
                                             </ul>
                                             {/* <ul className="submenu">
                                                 <li className="has_dropdown">

@@ -64,6 +64,7 @@ import Linkpages from '../screens/footerlinks/linkpages';
 import Footerdata from '../components/footer/footerdata';
 import Cart from '../screens/cart/cart';
 import Ordernow from '../screens/Order Now/ordernow';
+import Products from '../screens/services/servicesInner/academicPaperWriting';
 export default class route extends Component {
     render() {
         return (
@@ -71,13 +72,13 @@ export default class route extends Component {
                 <Switch>
                     <Layout>
                         <Route exact path='/about' component={About} />
-                        <Route exact path='/home' component={Home} />
+                        <Route exact path='/' component={Home} />
                         <Route exact path='/contact' component={Contact} />
                         <Route exact path='/writers' component={Writers} />
                         <Route exact path='/account' component={Account}/>
                         <Route exact path='/services' component={Services}/>
                         <Route exact path='/ordernow' component={Ordernow} />
-                        <Route exact path='/academicPaperWriting' component={AcademicPaperWriting}/>
+                        <Route exact path='/products/:id' component={Products}/>
                         <Route exact path='/rewriting' component={Rewriting}/>
                         <Route exact path='/proofreading' component={Proofreading}/>
                         <Route exact path='/admissionServices' component={Admissionservices}/>

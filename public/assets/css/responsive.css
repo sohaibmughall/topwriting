@@ -1,4 +1,5 @@
 /* XXl Device :1500px. */
+
 @media (min-width: 1500px) and (max-width: 1750px) {
     .header_right .account {
         padding-left: 35px;
@@ -12,9 +13,13 @@
         max-width: 660px;
     }
 }
+
+
 /* XL Device :1200px. */
+
 @media (min-width: 1200px) and (max-width: 1500px) {
-    .header_top, .header_bottom {
+    .header_top,
+    .header_bottom {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -55,7 +60,8 @@
     .testimonial_single .tma_info {
         margin-top: 30px;
     }
-    .js_wrap .js_icon .left, .js_wrap .js_icon .right {
+    .js_wrap .js_icon .left,
+    .js_wrap .js_icon .right {
         max-width: 230px;
     }
     .js_wrap .js_icon .left {
@@ -65,9 +71,13 @@
         right: -40px;
     }
 }
+
+
 /* LG Device :992px. */
+
 @media (min-width: 992px) and (max-width: 1199px) {
-    .header_top, .header_bottom {
+    .header_top,
+    .header_bottom {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -103,7 +113,8 @@
     .ct_single {
         padding: 30px 25px;
     }
-    .js_wrap .js_icon .left, .js_wrap .js_icon .right {
+    .js_wrap .js_icon .left,
+    .js_wrap .js_icon .right {
         max-width: 170px;
     }
     .js_wrap .js_icon .left {
@@ -146,6 +157,7 @@
     }
     .masonry_active button {
         padding: 13px 20px;
+        display: inline-block;
     }
     .course_dtls_left {
         padding-right: 0;
@@ -183,7 +195,10 @@
         padding: 60px 50px;
     }
 }
+
+
 /* MD Device :768px. */
+
 @media (min-width: 768px) and (max-width: 991px) {
     .header_right .account {
         display: none;
@@ -197,7 +212,8 @@
     .header_search_wrap {
         display: none;
     }
-    .header_search_wrap .search_main, .hamburger_menu a {
+    .header_search_wrap .search_main,
+    .hamburger_menu a {
         background: #0073ff;
         color: #fff;
         border-radius: 0;
@@ -265,10 +281,11 @@
     .testimonial_active {
         padding: 50px;
     }
-    .sec_title > p {
+    .sec_title>p {
         max-width: 600px;
     }
-    .footer_widget.footer_link-right, .footer_widget.footer_right_text {
+    .footer_widget.footer_link-right,
+    .footer_widget.footer_right_text {
         padding-left: 0;
     }
     .footer_bottom .left .logo {
@@ -341,12 +358,16 @@
         height: 400px;
     }
 }
+
+
 /* SM Device :320px. */
+
 @media (max-width: 767px) {
     .header_search_wrap {
         display: none;
     }
-    .header_search_wrap .search_main, .hamburger_menu a {
+    .header_search_wrap .search_main,
+    .hamburger_menu a {
         background: #0073ff;
         color: #fff;
         border-radius: 0;
@@ -413,7 +434,7 @@
     .about_area .about_content {
         padding-left: 0;
     }
-    .sec_title > h2 {
+    .sec_title>h2 {
         color: #0c0c0c;
         font-size: 35px;
     }
@@ -463,7 +484,7 @@
     .bai_wrap {
         padding: 60px 15px;
     }
-    .bai_wrap > h3 {
+    .bai_wrap>h3 {
         font-size: 35px;
     }
     .footer_widget.footer_link-right {
@@ -514,7 +535,8 @@
         padding: 12px 15px;
         font-size: 12px;
     }
-    .course_dtls_left .cdl_top, .course_dtls_left .cdl_bottom {
+    .course_dtls_left .cdl_top,
+    .course_dtls_left .cdl_bottom {
         padding: 15px;
     }
     .cdl_bottom .nav-item .nav-link {
@@ -588,7 +610,8 @@
         margin-bottom: 10px;
         padding-left: 10px;
     }
-    .details_content .title, .releted_product .title {
+    .details_content .title,
+    .releted_product .title {
         font-size: 30px;
     }
     .cart_table {
@@ -668,7 +691,10 @@
         padding: 40px 20px;
     }
 }
+
+
 /* Large Mobile :480px. */
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .tm_left-wrap {
         padding: 75px 80px 80px 80px;

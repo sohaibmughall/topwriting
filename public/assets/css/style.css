@@ -961,6 +961,7 @@ textarea:focus {
 }
 
 .masonry_active button {
+    display: inline-block;
     background: #fff;
     color: #8d8d8d;
     border: none;
