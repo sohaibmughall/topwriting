@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { baseurl } from '../../components/Apiurl/apiurl';
 
 class Account extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: "dasdas",
-            email: "zubair12349@gmail.com",
-            pass: "12345678",
+            name: "",
+            email: "",
+            pass: "",
         }
     }
-
     login = () => {
         const data = new FormData();
         data.append('email', this.state.email);
@@ -18,17 +18,13 @@ class Account extends Component {
         const options = {
             headers: {
                 'Content-Type': 'application/json',
-                // 'Access-Control-Allow-Origin': '*',
-                // 'Connection': 'keep-alive'
-
             }
         }
-        axios.post('http://192.168.18.10/topwriting-backend/public/api/login', data, options).then(
+        axios.post(`${baseurl}/login`, data, options).then(
             function (response) {
                 console.log(response.data);
             }
         )
-
     }
     registor = () => {
         const data = new FormData();
@@ -36,7 +32,7 @@ class Account extends Component {
         data.append('password', this.state.pass);
         data.append('name', this.state.name);
         const options = { headers: { 'Content-Type': 'application/json' } }
-        axios.post('http://192.168.18.10/topwriting-backend/public/api/register', data, options).then(
+        axios.post(`${baseurl}/api/register`, data, options).then(
             function (response) {
                 console.log(response.data);
             }
