@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Calculator from "../../../components/calculator/calculator";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { baseurl } from "../../../components/Apiurl/apiurl";
+import { allurl, baseurl } from "../../../components/Apiurl/apiurl";
 
 class Products extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class Products extends Component {
                       <div className="course_single mb-30">
                         <div className="c_thumb">
                           <img
-                            src={`http://192.168.0.103/image/product/${element.image}`}
+                            src={`${allurl}image/product/${element.image}`}
                             alt=""
                           />
                         </div>

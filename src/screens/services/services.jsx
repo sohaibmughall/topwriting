@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../Spinner";
 import { baseurl } from "../../components/Apiurl/apiurl";
+import { allurl } from "../../components/Apiurl/apiurl";
 class Services extends Component {
   constructor(props) {
     super(props);
@@ -50,7 +51,7 @@ class Services extends Component {
                             <Link to={`/products/${element.id}`}>
                               {" "}
                               <img
-                                src={`http://192.168.0.103/image/product/${element.image}`}
+                                src={`${allurl}image/product/${element.image}`}
                                 alt=""
                               />
                             </Link>
