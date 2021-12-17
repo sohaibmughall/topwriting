@@ -12,19 +12,11 @@ export default class Cart extends Component {
                                 <div className="col-lg-8">
                                     <div className="course_dtls_left mb-30">
                                         <div className="cdl_top mb-30">
-                                            <Calculator />
+                                            <Calculator/>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4">
-                                    <div className="course_dtls_right">
-                                        <div className="course_widget mb-30">
-                                            <div>
-                                                <h3 className="text-center">YOUR ORDER SUMMARY</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </section>

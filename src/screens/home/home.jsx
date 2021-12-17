@@ -108,7 +108,7 @@ class Home extends Component {
                                 <div className="row flex-row-reverse align-items-center">
                                     <div className="col-xl-7 col-lg-6 col-md-12">
                                         <div className="hero_img f-right">
-                                        <Calculator/>
+                                        <Calculator />
                                             {/* <img src="assets\img\hero\hero_img.png" alt="" /> */}
                                         </div>
                                     </div>
