@@ -51,7 +51,7 @@ class Home extends Component {
                 );
             });
             await axios
-            .get(`${baseurl}/get-product/4 `, options)
+            .get(`${baseurl}/get-product/5 `, options)
             .then(function (response) {
                 response.data.map((item) =>
                     th.setState({
@@ -60,7 +60,7 @@ class Home extends Component {
                 );
             });
             await axios
-            .get(`${baseurl}/get-product/5 `, options)
+            .get(`${baseurl}/get-product/4 `, options)
             .then(function (response) {
                 response.data.map((item) =>
                     th.setState({
@@ -275,7 +275,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end mb-20">
-                                        <Link to="/proofreading" className="thm_btn">
+                                        <Link to="/products/3" className="thm_btn">
                                             {" "}
                                             View all<i className="fal fa-long-arrow-right"></i>
                                         </Link>
@@ -357,7 +357,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end mb-20">
-                                        <Link to="/academicPaperWriting" className="thm_btn">
+                                        <Link to="/products/1" className="thm_btn">
                                             {" "}
                                             View all<i className="fal fa-long-arrow-right"></i>
                                         </Link>
@@ -410,7 +410,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end mb-20">
-                                        <Link to="/academicPaperWriting" className="thm_btn">
+                                        <Link to="/products/4" className="thm_btn">
                                             {" "}
                                             View all<i className="fal fa-long-arrow-right"></i>
                                         </Link>
@@ -453,7 +453,7 @@ class Home extends Component {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="about_img mb-30">
-                                        <img src="assets\img\about\about_img.png" alt="" />
+                                        <img src="assets\img\course\00.jpg" alt="" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -486,7 +486,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end mb-20">
-                                        <Link to="/academicPaperWriting" className="thm_btn">
+                                        <Link to="/products/5" className="thm_btn">
                                             {" "}
                                             View all<i className="fal fa-long-arrow-right"></i>
                                         </Link>
@@ -541,7 +541,7 @@ class Home extends Component {
                                 </div>
                                 <div className="col-lg-4 col-md-4">
                                     <div className="crs_btn text-md-end mb-20">
-                                        <Link to="/rewriting" className="thm_btn">
+                                        <Link to="/products/2" className="thm_btn">
                                             {" "}
                                             View all<i className="fal fa-long-arrow-right"></i>
                                         </Link>
