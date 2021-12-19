@@ -63,6 +63,7 @@ class Products extends Component {
                           <img
                             src={`${allurl}image/product/${element.image}`}
                             alt=""
+                            style={{ width:"70%" }}
                           />
                         </div>
                         <div className="course_content">

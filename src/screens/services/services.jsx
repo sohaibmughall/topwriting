@@ -53,6 +53,7 @@ class Services extends Component {
                               <img
                                 src={`${allurl}image/product/${element.image}`}
                                 alt=""
+                                style={{ width:"70%" }}
                               />
                             </Link>
                           </div>

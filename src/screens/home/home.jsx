@@ -10,6 +10,10 @@ class Home extends Component {
         console.log("Hello I am a constructor");
         this.state = {
             products: [],
+            academicproducts:[],
+            rewritingproducts:[],
+            dissertationproducts:[],
+            admissionproducts:[]
         };
     }
 
@@ -18,15 +22,57 @@ class Home extends Component {
         const th = this;
         const options = { headers: { "Content-Type": "application/json" } };
         await axios
+            .get(`${baseurl}/get-product/3 `, options)
+            .then(function (response) {
+                response.data.map((item) =>
+                    th.setState({
+                        products: item.products.sort(() => Math.random() - Math.random())
+                    })
+                );
+            });
+
+            await axios
             .get(`${baseurl}/get-product/1 `, options)
             .then(function (response) {
                 response.data.map((item) =>
                     th.setState({
-                        products: item.products.sort(() => Math.random() - Math.random()),
+                        academicproducts: item.products.sort(() => Math.random() - Math.random())
                     })
                 );
             });
+
+            await axios
+            .get(`${baseurl}/get-product/2 `, options)
+            .then(function (response) {
+                response.data.map((item) =>
+                    th.setState({
+                        rewritingproducts: item.products.sort(() => Math.random() - Math.random())
+                    })
+                );
+            });
+            await axios
+            .get(`${baseurl}/get-product/4 `, options)
+            .then(function (response) {
+                response.data.map((item) =>
+                    th.setState({
+                        dissertationproducts: item.products.sort(() => Math.random() - Math.random())
+                    })
+                );
+            });
+            await axios
+            .get(`${baseurl}/get-product/5 `, options)
+            .then(function (response) {
+                response.data.map((item) =>
+                    th.setState({
+                        admissionproducts: item.products.sort(() => Math.random() - Math.random())
+                    })
+                );
+            });
+
     }
+
+
+
 
     render() {
         return (
@@ -202,13 +248,11 @@ class Home extends Component {
                                                 potential.
                                             </p>
                                             <div className="hero_btn mt-15">
-                                                <a className="thm_btn" href="courses.html">
-                                                    View Courses
+                                            <Link to="/contact" className="thm_btn" href="courses.html">
+                                                    Contact Us
                                                     <i className="fal fa-long-arrow-right"></i>
-                                                </a>
-                                                <a className="thm_btn thm_btn-2" href="about.html">
-                                                    Start Trial<i className="fal fa-long-arrow-right"></i>
-                                                </a>
+                                                    </Link>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -280,52 +324,18 @@ class Home extends Component {
                                 <div className="col-lg-6">
                                     <div className="about_content mb-30">
                                         <div className="sec_title">
-                                            <h2>Learn something new, and Grow your skills.</h2>
+                                            <h2>All you need to know about us</h2>
                                             <p>
-                                                Rorem ipsum dolor sit amet, consectetur adipisicing
-                                                elit, sed do eiusmod tempor incididunt ut labore et
-                                                dolore magna aliqua Ut enim ad minim veniam, quis
-                                                nostrudye. magna aliqua Utey Tim ad minim veniam, quis
-                                                nostrudye.
+                                            We are a UK-based service that serves the writing needs of college and university students. We understand that it can be tough for students to catch up with the lectures and tests with assignments coming on top. Rather than trailing after the deadlines, students can avail our services and focus on their lectures and exams while sorting out their upcoming timetable.
+
                                             </p>
                                         </div>
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span>
-                                                        <i className="fal fa-check"></i>Expert Trainer
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span>
-                                                        <i className="fal fa-check"></i>Remote Learning
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span>
-                                                        <i className="fal fa-check"></i>Lifetime Access
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                                <div className="al_signle">
-                                                    <span>
-                                                        <i className="fal fa-check"></i>Self Developmentr
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       
                                         <div className="about_btn mt-10">
-                                            <a className="thm_btn" href="courses.html">
-                                                View Courses<i className="fal fa-long-arrow-right"></i>
-                                            </a>
-                                            <a className="thm_btn thm_btn-2" href="about.html">
-                                                Start Trial<i className="fal fa-long-arrow-right"></i>
-                                            </a>
+                                            <Link to="/about" className="thm_btn" href="courses.html">
+                                                View <i className="fal fa-long-arrow-right"></i>
+                                                </Link>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -353,209 +363,169 @@ class Home extends Component {
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\f1.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">CASE STUDY</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\f2.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">LAB REPORT</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\f3.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">
-                                                    POWER POINT PRESENTATION
-                                                </a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\f4.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">ARTICLE</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\f5.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">ARTICLE CRITIQUE</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\f6.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">PROJECT</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section
-                        className="counter_area counter_padding"
-                        data-overlay="7"
-                        data-background="assets/img/bg/counter_bg.jpg"
-                    >
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="coun_wrap">
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_01.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>
-                                                    146<span>+</span>
-                                                </h2>
-                                                <p>Award Winning</p>
-                                            </div>
-                                        </div>
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_02.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>
-                                                    28k<span>+</span>
-                                                </h2>
-                                                <p>Total Student</p>
-                                            </div>
-                                        </div>
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_03.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>
-                                                    138<span>+</span>
-                                                </h2>
-                                                <p>Total instructors</p>
-                                            </div>
-                                        </div>
-                                        <div className="coun_single">
-                                            <div className="c_icon">
-                                                <img src="assets\img\icon\c_04.png" alt="" />
-                                            </div>
-                                            <div className="c_text">
-                                                <h2>
-                                                    214<span>+</span>
-                                                </h2>
-                                                <p>over the world</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="join_courses_area">
-                        <div className="container">
-                            <div className="js_wrap white_bg">
                                 <div className="row">
-                                    <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                                        <div className="js_text">
-                                            <div className="sec_title sec_title-2 text-center">
-                                                <h2>If your need join our course</h2>
-                                                <p>
-                                                    We believe everyone has the capacity to be creative.
-                                                    Turitor is aplace where people develop their own
-                                                    potential.
-                                                </p>
+                                {this.state.academicproducts.slice(0, 6).map((element) => {
+                                    return (
+                                        <div className="col-lg-4 col-md-6">
+                                            <div className="course_single mb-30">
+                                                <div className="c_thumb">
+                                                    <img
+                                                        src={`${allurl}image/product/${element.image}`}
+                                                        alt=""
+                                                        style={{ width:"70%" }}
+                                                    />
+                                                </div>
+                                                <div className="course_content">
+                                                    <h3 className="title">
+                                                        <a href="course-details.html">{element.name}</a>
+                                                    </h3>
+                                                    <div className="about_btn mt-10 d-flex justify-content-between">
+                                                        <Link to="/ordernow" className="thm_btn thm_btn-2">
+                                                            Order Now
+                                                            <i className="fal fa-long-arrow-right"></i>
+                                                        </Link>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <form className="js_from" action="#">
-                                                <input type="text" placeholder="Enter your mail" />
-                                                <button className="thm_btn thm_btn-2">
-                                                    submit now<i className="fal fa-long-arrow-right"></i>
-                                                </button>
-                                            </form>
                                         </div>
+                                    );
+                                })}
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+
+                    <section className="courses_area pt-120 pb-90">
+                        <div className="container">
+                            <div className="row align-items-center mb-15">
+                                <div className="col-lg-8 col-md-8">
+                                    <div className="sec_title">
+                                        <h2>ADMISSION SERVICES</h2>
+                                        <p>
+                                            Online learning offers a new way to explore subjects
+                                            you’re passionate about.
+                                        </p>
                                     </div>
                                 </div>
-                                <div className="js_icon">
-                                    <div className="left">
-                                        <img src="assets\img\icon\js_01.png" alt="" />
+                                <div className="col-lg-4 col-md-4">
+                                    <div className="crs_btn text-md-end mb-20">
+                                        <Link to="/academicPaperWriting" className="thm_btn">
+                                            {" "}
+                                            View all<i className="fal fa-long-arrow-right"></i>
+                                        </Link>
                                     </div>
-                                    <div className="right">
-                                        <img src="assets\img\icon\js_02.png" alt="" />
+                                </div>
+                                <div className="row">
+                                {this.state.admissionproducts.map((element) => {
+                                    return (
+                                        <div className="col-lg-4 col-md-6">
+                                            <div className="course_single mb-30">
+                                                <div className="c_thumb">
+                                                    <img
+                                                        src={`${allurl}image/product/${element.image}`}
+                                                        alt=""
+                                                        style={{ width:"70%" }}
+                                                    />
+                                                </div>
+                                                <div className="course_content">
+                                                    <h3 className="title">
+                                                        <a href="course-details.html">{element.name}</a>
+                                                    </h3>
+                                                    <div className="about_btn mt-10 d-flex justify-content-between">
+                                                        <Link to="/ordernow" className="thm_btn thm_btn-2">
+                                                            Order Now
+                                                            <i className="fal fa-long-arrow-right"></i>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <section className="about_area white_bg pt-120 pb-90">
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-lg-6">
+                                    <div className="about_img mb-30">
+                                        <img src="assets\img\about\about_img.png" alt="" />
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="about_content mb-30">
+                                        <div className="sec_title">
+                                            <h2>All you need to know about our writers</h2>
+                                            <p>
+                                            Time to meet the people behind the Top Writings logo! Our writers are the engine running our system and also the ones that you, dear clients, talk to most frequently here. So we treat the process of writer assigning with the utmost care. Everyone within our UK essay writing team is an expert in their chosen field and they have the corresponding credentials to prove it. We give priority to writers originating from the UK. 
+                                            </p>
+                                        </div>
+                                       
+                                        <div className="about_btn mt-10">
+                                            <Link to="/writers" className="thm_btn" href="courses.html">
+                                                View <i className="fal fa-long-arrow-right"></i>
+                                                </Link>
+                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+                    <section className="courses_area pt-120 pb-90">
+                        <div className="container">
+                            <div className="row align-items-center mb-15">
+                                <div className="col-lg-8 col-md-8">
+                                    <div className="sec_title">
+                                        <h2>DISSERTATION SERVICES</h2>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-4">
+                                    <div className="crs_btn text-md-end mb-20">
+                                        <Link to="/academicPaperWriting" className="thm_btn">
+                                            {" "}
+                                            View all<i className="fal fa-long-arrow-right"></i>
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                {this.state.dissertationproducts.slice(0, 6).map((element) => {
+                                    return (
+                                        <div className="col-lg-4 col-md-6">
+                                            <div className="course_single mb-30">
+                                                <div className="c_thumb">
+                                                    <img
+                                                        src={`${allurl}image/product/${element.image}`}
+                                                        alt=""
+                                                        style={{ width:"70%" }}
+                                                    />
+                                                </div>
+                                                <div className="course_content">
+                                                    <h3 className="title">
+                                                        <a href="course-details.html">{element.name}</a>
+                                                    </h3>
+                                                    <div className="about_btn mt-10 d-flex justify-content-between">
+                                                        <Link to="/ordernow" className="thm_btn thm_btn-2">
+                                                            Order Now
+                                                            <i className="fal fa-long-arrow-right"></i>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+
+
 
                     <section className="team_area pt-110 pb-90">
                         <div className="container">
@@ -579,219 +549,37 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\d1.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">PROJECT</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
+                                {this.state.rewritingproducts.slice(0, 6).map((element) => {
+                                    return (
+                                        <div className="col-lg-4 col-md-6">
+                                            <div className="course_single mb-30">
+                                                <div className="c_thumb">
+                                                    <img
+                                                        src={`${allurl}image/product/${element.image}`}
+                                                        alt=""
+                                                        style={{ width:"70%" }}
+                                                    />
+                                                </div>
+                                                <div className="course_content">
+                                                    <h3 className="title">
+                                                        <a href="course-details.html">{element.name}</a>
+                                                    </h3>
+                                                    <div className="about_btn mt-10 d-flex justify-content-between">
+                                                        <Link to="/ordernow" className="thm_btn thm_btn-2">
+                                                            Order Now
+                                                            <i className="fal fa-long-arrow-right"></i>
+                                                        </Link>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\d2.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">REACTION PAPER</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\d3.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">
-                                                    ANNOTATED BILBLIOGRAPHY
-                                                </a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\d4.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">ARTICLE CRITIQUE</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\d5.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">ARTICLE</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="course_single mb-30">
-                                        <div className="c_thumb">
-                                            <img src="assets\img\course\d6.png" alt="" />
-                                        </div>
-                                        <div className="course_content">
-                                            <h3 className="title">
-                                                <a href="course-details.html">LAB REPORT</a>
-                                            </h3>
-                                            <div className="about_btn mt-10 d-flex justify-content-between">
-                                                <Link to="/ordernow" className="thm_btn thm_btn-2">
-                                                    Order Now<i className="fal fa-long-arrow-right"></i>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </section>
 
-                    <section className="testimonial_area">
-                        <div className="container-fluid p-0">
-                            <div className="row g-0">
-                                <div className="col-lg-6">
-                                    <div
-                                        className="tm_left-wrap"
-                                        data-overlay="7"
-                                        data-background="assets/img/bg/tm_bg.jpg"
-                                    >
-                                        <div className="sec_title">
-                                            <h2>Our happy student say</h2>
-                                            <p>
-                                                Rorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                Delectus quas aperiam cum eligendi libero iusto nostrum
-                                                eaque alias quasi minima maxime provident, dolor
-                                                mollitia quis inventore impedit, deserunt blanditiis
-                                                quos cumque quibusdam eum quidem.
-                                            </p>
-                                        </div>
-                                        <div className="tm_btn">
-                                            <a className="thm_btn thm_btn-2" href="courses.html">
-                                                View All Courses
-                                                <i className="fal fa-long-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="tm_right-wrap">
-                                        <div className="testimonial_active owl-carousel">
-                                            <div className="testimonial_single">
-                                                <div className="tm_thumb">
-                                                    <img
-                                                        src="assets\img\testimonial\tm_author.jpg"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="tm_text">
-                                                    <p>
-                                                        Rorem ipsum dolor sit amet, consectetur adipisicing
-                                                        elit, sed eiusmod tempor incididunt ut labore et
-                                                        dolore magna aliqua.enim ad minim veniam, quis
-                                                        nostrud exercitation ullamco laboris nisi ut commodo
-                                                        consequat. Duis aute irure dolor in reprehenderit in
-                                                        voluptate velit esse cillum dolore eu fugiat nulla
-                                                        pariatur.{" "}
-                                                    </p>
-                                                    <div className="tma_info mt-50">
-                                                        <h4>Rasalina De Willamson</h4>
-                                                        <p>Founder,Foxer.co</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="testimonial_single">
-                                                <div className="tm_thumb">
-                                                    <img
-                                                        src="assets\img\testimonial\tm_author.jpg"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="tm_text">
-                                                    <p>
-                                                        Rorem ipsum dolor sit amet, consectetur adipisicing
-                                                        elit, sed eiusmod tempor incididunt ut labore et
-                                                        dolore magna aliqua.enim ad minim veniam, quis
-                                                        nostrud exercitation ullamco laboris nisi ut commodo
-                                                        consequat. Duis aute irure dolor in reprehenderit in
-                                                        voluptate velit esse cillum dolore eu fugiat nulla
-                                                        pariatur.{" "}
-                                                    </p>
-                                                    <div className="tma_info mt-50">
-                                                        <h4>Rasalina De Willamson</h4>
-                                                        <p>Founder,Foxer.co</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="testimonial_single">
-                                                <div className="tm_thumb">
-                                                    <img
-                                                        src="assets\img\testimonial\tm_author.jpg"
-                                                        alt=""
-                                                    />
-                                                </div>
-                                                <div className="tm_text">
-                                                    <p>
-                                                        Rorem ipsum dolor sit amet, consectetur adipisicing
-                                                        elit, sed eiusmod tempor incididunt ut labore et
-                                                        dolore magna aliqua.enim ad minim veniam, quis
-                                                        nostrud exercitation ullamco laboris nisi ut commodo
-                                                        consequat. Duis aute irure dolor in reprehenderit in
-                                                        voluptate velit esse cillum dolore eu fugiat nulla
-                                                        pariatur.{" "}
-                                                    </p>
-                                                    <div className="tma_info mt-50">
-                                                        <h4>Rasalina De Willamson</h4>
-                                                        <p>Founder,Foxer.co</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                   
 
                     <section className="blog_area blog_top-space pt-190 pb-90">
                         <div className="container">
@@ -924,9 +712,9 @@ class Home extends Component {
                                     <div className="bai_wrap bai_left theme_bg">
                                         <span># Become A Instructor</span>
                                         <h3>Become a Instructor</h3>
-                                        <a className="thm_btn thm_btn-border" href="contact.html">
+                                        <Link to="/contact" className="thm_btn thm_btn-border">
                                             apply now<i className="fal fa-long-arrow-right"></i>
-                                        </a>
+                                       </Link>
                                         <div className="bai_shape">
                                             <img src="assets\img\icon\bai_shape_01.png" alt="" />
                                         </div>
@@ -936,9 +724,9 @@ class Home extends Component {
                                     <div className="bai_wrap bai_right white_bg">
                                         <span># Become A Partner</span>
                                         <h3>Become a Partner</h3>
-                                        <a className="thm_btn thm_btn-2" href="contact.html">
+                                        <Link to="/contact" className="thm_btn thm_btn-2">
                                             Contact us<i className="fal fa-long-arrow-right"></i>
-                                        </a>
+                                       </Link>
                                         <div className="bai_shape">
                                             <img src="assets\img\icon\bai_shape_02.png" alt="" />
                                         </div>
