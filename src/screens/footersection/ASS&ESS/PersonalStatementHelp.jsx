@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class PersonalStatementHelp extends Component {
     render() {
         return (
@@ -25,7 +25,7 @@ export default class PersonalStatementHelp extends Component {
 <p>If you are having difficulty writing your personal statement or would like a rewrite of a statement you have already written, then it is best to contact a personal statement writing service. Finding a personal statement writer online is the best way to ensure that the content of your statement is optimized, and your message is clear. Legitimate companies exist online that can help you for a fee, or you can access one of the many free services offered by universities, colleges, and government advice lines.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

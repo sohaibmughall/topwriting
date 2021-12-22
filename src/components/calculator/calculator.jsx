@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./calculator.css";
 import data from "./data";
+import axios from 'axios'
 import { add, total } from "cart-localstorage";
+import { baseurl } from '../../components/Apiurl/apiurl';
 
 class Calculator extends Component {
   constructor(props) {
@@ -22,7 +24,26 @@ class Calculator extends Component {
       data: {},
     };
   }
-
+  
+  Ordernow = () => {
+    const data = new FormData();
+    console.log("OUTPUT: ",this.state.services,this.state.typechange,this.state.pages,this.state.academicLevel,this.state.urgency);
+    data.append('Types_of_Services', this.state.services);
+    data.append('Types_of_paper', this.state.typechange);
+    data.append('Number_of_Pages_Or_Words', this.state.pages);
+    data.append('Academic_Level', this.state.academicLevel);
+    data.append('Urgency', this.state.urgency)
+    const options = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    axios.post(`${baseurl}/order`, data, options).then(
+        function (response) {
+            console.log(response.data.paperType);
+        }
+    )
+}
   addWords = () => {
     this.setState({ words: this.state.words + 275 });
     this.setState({ pages: this.state.pages + 1 });
@@ -89,22 +110,22 @@ class Calculator extends Component {
     // dataToTypeChange = this.state.typechange;
     // console.log(dataToTypeChange.name);
 
-    const myOrder = {
-      id: this.state.id,
-      paperType: this.state.serviceType,
-      serviceType: this.state.typechange,
-      price: total,
-      level: this.state.academicLevel,
-      pages: this.state.pages,
-      words: this.state.words,
-      urgency: this.state.urgency,
-    };
-    console.log("Order:", myOrder);
+    // const myOrder = {
+    //   id: this.state.id,
+    //   paperType: this.state.serviceType,
+    //   serviceType: this.state.typechange,
+    //   price: total,
+    //   level: this.state.academicLevel,
+    //   pages: this.state.pages,
+    //   words: this.state.words,
+    //   urgency: this.state.urgency,
+    // };
+    // console.log("Order:", myOrder);
     // add(myOrder, this.state.pages);
 
-    const placeOrder = () => {
-      add(myOrder, this.state.pages);
-    };
+    // const placeOrder = () => {
+    //   add(myOrder, this.state.pages);
+    // };
     const { summary } = this.props;
     return (
       <main>
@@ -115,12 +136,12 @@ class Calculator extends Component {
                 <div className="course_dtls_left mb-30">
                   <div className="cdl_top mb-30">
                 
-                      <label for="service_type">TYPES OF SERVICE</label>
+                      <label for="service_type" >TYPES OF SERVICE</label>
                       <select
                         id="service_type"
                         onChange={(e) => this.service(e)}
                       >
-                        <option label="Please Select"></option>
+                        <option label="Please Select" value={this.state.services} onChange={(e)=> {this.setState({services: e.target.value})}}></option>
                         {data.map((item) => {
                           return (
                             <option label={item.name} value={item.id}>
@@ -129,14 +150,14 @@ class Calculator extends Component {
                           );
                         })}
                       </select>
-                      <label for="paper_type">TYPE OF PAPER</label>
+                      <label for="paper_type" >TYPE OF PAPER</label>
                       <select
                         id="paper_type"
                         onChange={(e) =>
                           this.setState({ typechange: e.target.value })
                         }
                       >
-                        <option label="Please Select"></option>
+                        <option label="Please Select" value={this.state.typechange} onChange={(e)=> {this.setState({typechange: e.target.value})}}></option>
                         {this.state.type.map((item) => {
                           return (
                             <option
@@ -149,7 +170,7 @@ class Calculator extends Component {
                           );
                         })}
                       </select>
-                      <label for="pages">NUMBER OF PAGES / WORDS</label>
+                      <label for="pages" value={this.state.pages} onChange={(e)=> {this.setState({pages: e.target.value})}}>NUMBER OF PAGES / WORDS</label>
                       <div className="d-flex justify-content-around">
                         <div className="d-flex justify-content-evenly align-items-center">
                           <button onClick={this.removePages}>-</button>
@@ -165,7 +186,7 @@ class Calculator extends Component {
                       <br />
                       {this.state.level ? (
                         <>
-                          <label for="academic_level_1">ACADEMIC LEVEL</label>
+                          <label for="academic_level_1" value={this.state.academicLevel} onChange={(e)=> {this.setState({academicLevel: e.target.value})}}>ACADEMIC LEVEL</label>
                           <select
                             id="academic_level_1"
                             onChange={(e) =>
@@ -186,7 +207,7 @@ class Calculator extends Component {
                           </select>
                         </>
                       ) : null}
-                      <label for="customer_order_service_id">URGENCY</label>
+                      <label for="customer_order_service_id" value={this.state.urgency} onChange={(e)=> {this.setState({urgency: e.target.value})}}>URGENCY</label>
                       <select
                         id="customer_order_service_id"
                         onChange={(e) =>
@@ -242,9 +263,8 @@ class Calculator extends Component {
                         <h3>
                           Total : <span>{total}</span>{" "}
                         </h3>
-                        <a className="thm_btn thm_btn-2" onClick={placeOrder}>
-                          Order Now<i className="fal fa-long-arrow-right"></i>
-                        </a>
+                        <button className="thm_btn" onClick={() => this.Ordernow()}>Order Now<i className="fal fa-long-arrow-right"></i></button>
+        
                       </div>
                     </div>
                 </div>

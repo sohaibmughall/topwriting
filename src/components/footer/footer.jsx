@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Footerdata from './footerdata';
-
+import axios from 'axios'
+import { baseurl } from '../../components/Apiurl/apiurl';
 class Footer extends Component {
-    
+    constructor(props) {
+        super(props);
+        this.state = {
+            email:""
+        }
+    }
+    Subscriber = () => {
+        console.log('Result: ',this.state.email);
+        const data = new FormData();
+        data.append('email', this.state.email);
+        const options = {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        }
+        axios.post(`${baseurl}/subscriber`, data, options).then(
+            function (response) {
+                console.log(response.data);
+            }
+        )
+    }
+
+
+
     render() {
         console.log(Footerdata)
         return (
@@ -17,11 +41,11 @@ class Footer extends Component {
                                         <h3>Sign up Newslatter</h3>
                                     </div>
                                 </div>
-                                <div className="col-lg-5 col-md-6">
-                                    <form className="sub_from" action="/">
-                                        <input type="text" placeholder="Enter Your Mail" />
-                                        <button className="thm_btn">Subscribe</button>
-                                    </form>
+                                <div className="col-lg-5 col-md-6 sub_from">
+                                   
+                                        <input type="text" placeholder="Enter Your Mail" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
+                                        <button className="thm_btn" onClick={() => this.Subscriber()}>Subscribe</button>
+                               
                                 </div>
                             </div>
                         </div>
@@ -31,10 +55,6 @@ class Footer extends Component {
                                     <div className="footer_widget">
                                         <h3>SERVICES</h3>
                                         <ul className="footer_link">
-                                            <li >
-                                               
-                                                <Link to="/writemyessay">Write my Essay</Link>
-                                                </li>
                                             <li><Link to="/writemydessertation">Write my Dissertation</Link></li>
                                             <li><Link to="/assignmentwriter">Assignment Writer</Link></li>
                                             <li><Link to="/lawessay">Law Essay</Link></li>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class AssignmentHelp extends Component {
     render() {
@@ -29,7 +30,7 @@ In fact, buying an assignment from us is almost like buying yourself the gift of
 Place an order now and you could have your assignment written and delivered in just four hours from one of our expert writers.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/O1.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

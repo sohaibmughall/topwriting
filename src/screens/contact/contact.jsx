@@ -1,21 +1,41 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
+import axios from 'axios'
+import { baseurl } from '../../components/Apiurl/apiurl';
 class Contact extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email:"",
+            name:"",
+            message:"",
+            subject:"",
+
+        }
+    }
+    Contact = () => {
+        console.log('Result: ',this.state.email);
+        const data = new FormData();
+        data.append('name', this.state.name);
+        data.append('email', this.state.email);
+        data.append('subject', this.state.subject);
+        data.append('message', this.state.message);
+        const options = {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        }
+        axios.post(`${baseurl}/contact`, data, options).then(
+            function (response) {
+                console.log(response.data);
+            }
+        )
+    }
     render() {
         return (
             <>
                 <main>
-                    <section className="page_title_area" data-overlay="6" data-background="assets/img/bg/page_title_bg.jpg">
-                        <div className="containe">
-                            <div className="row">
-                                <div className="col-l2">
-                                    <div className="page_title text-center">
-                                        <h2>Get In Touch</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    
 
                     <section className="contact_info_area pb-60">
                         <div className="contact_map">
@@ -73,27 +93,27 @@ class Contact extends Component {
                             <div className="row">
                                 <div className="col-12">
                                     <div className="form_wrap contact_from">
-                                        <form action="#">
+                                        
                                             <div className="row">
                                                 <div className="col-lg-6">
-                                                    <input type="text" name="fname" placeholder="Your Name" />
+                                                    <input type="text" name="fname" placeholder="Your Name" value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })} />
                                                 </div>
                                                 <div className="col-lg-6">
-                                                    <input type="email" name="email" placeholder="Mail Address" />
+                                                    <input type="email" name="email" placeholder="Mail Address" value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
                                                 </div>
                                                 <div className="col-12">
-                                                    <input type="text" name="subject" placeholder="Enter Your Subject :" />
+                                                    <input type="text" name="subject" placeholder="Enter Your Subject :" value={this.state.subject} onChange={(e) => this.setState({ subject: e.target.value })}/>
                                                 </div>
                                                 <div className="col-12">
-                                                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Massage :"></textarea>
+                                                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message :" value={this.state.message} onChange={(e) => this.setState({ message: e.target.value })}></textarea>
                                                 </div>
                                                 <div className="col-12">
                                                     <div className="contact_btn text-center">
-                                                        <a className="thm_btn thm_btn-black" href="#">Send Massage</a>
+                                                    <button className="thm_btn" onClick={() => this.Contact()}>Send a Message</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                   
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +127,7 @@ class Contact extends Component {
                                     <div className="bai_wrap bai_left theme_bg">
                                         <span># Become A Instructor</span>
                                         <h3>Become a Instructor</h3>
-                                        <a className="thm_btn thm_btn-border" href="contact.html">apply now<i className="fal fa-long-arrow-right"></i></a>
+                                        <Link  to='/contact' className="thm_btn thm_btn-border">apply now<i className="fal fa-long-arrow-right"></i></Link>
                                         <div className="bai_shape">
                                             <img src="assets\img\icon\bai_shape_01.png" alt="" />
                                         </div>
@@ -117,7 +137,7 @@ class Contact extends Component {
                                     <div className="bai_wrap bai_right white_bg">
                                         <span># Become A Partner</span>
                                         <h3>Become a Partner</h3>
-                                        <a className="thm_btn thm_btn-2" href="contact.html">Contact us<i className="fal fa-long-arrow-right"></i></a>
+                                        <Link to='/contact' className="thm_btn thm_btn-2">Contact us<i className="fal fa-long-arrow-right"></i></Link>
                                         <div className="bai_shape">
                                             <img src="assets\img\icon\bai_shape_02.png" alt="" />
                                         </div>

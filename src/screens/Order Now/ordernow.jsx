@@ -20,7 +20,7 @@ export default class Ordernow extends Component {
                                     <div className="course_dtls_right">
                                         <div className="course_widget mb-30">
                                         <div className="c_thumb">
-                                        <img src="assets\img\course\f1.png" alt="" />
+                                        {/* <img src="assets\img\course\f1.png" alt="" /> */}
                                         </div>
                                         </div>
                                     </div>

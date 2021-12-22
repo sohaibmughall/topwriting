@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class Phdwriters extends Component {
     render() {
         return (
@@ -32,7 +32,7 @@ export default class Phdwriters extends Component {
 <p>A legitimate service will charge an appropriate amount for the help – an amount that includes good pay for the writer/consultant. Ph.D. research paper writers do not work for $15 a page. At Top Writings we charge that reasonable amount so that we can keep our wonderful Ph.D. writers.</p> <br /> <br />
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

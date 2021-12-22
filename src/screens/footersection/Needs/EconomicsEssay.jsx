@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class EconomicsEssay extends Component {
     render() {
@@ -25,7 +26,7 @@ export default class EconomicsEssay extends Component {
 <p>Wouldn’t it be great if you could find a writer with a degree in economics, who is a published writer, and who has a passion for academic work? Well, we have good news for you. If you need an economics essay or research paper, we have a professional writer available to work on your assignment for you. Every writer we hire has earned an advanced degree and has established subject matter expertise and thought leadership within the field of economics.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

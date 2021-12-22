@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class MarketingEssay extends Component {
     render() {
         return (
@@ -29,7 +29,7 @@ We aren’t cheap, but we are competitively priced. We hire expert writers and w
 After the work of writing and researching is done, your paper moves to QA. This is where the work is proofread, edited, and reviewed to ensure compliance with your instructions. When it passes muster, it is then delivered to you for your approval. If you are satisfied with our work, you may download it and use it as you wish. If not, we will happily make revisions until you are satisfied. If you would like to learn more about our revision policy, you can check out that and our other policy pages by clicking the appropriate links from our home page.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

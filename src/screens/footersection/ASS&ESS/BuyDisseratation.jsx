@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class BuyDisseratation extends Component {
     render() {
         return (
@@ -29,7 +29,7 @@ export default class BuyDisseratation extends Component {
 <p>2: They will claim that they can actually conduct the research that you are supposed to conduct at the local level that your tutor expects you to conduct. You know that when you submitted your dissertation proposal (if you have submitted it), your research design includes research that you are actually going to conduct. This part of your dissertation work you have to do. Any writing service that claims you can buy UK dissertation writing that includes original research is lying to you. They will take research that others have done and try to re-write it and pass it off to you. The outcome is never good.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+                        <Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

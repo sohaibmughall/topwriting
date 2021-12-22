@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class HRMEssay extends Component {
     render() {
@@ -31,7 +32,7 @@ Last but not least are our customer service agents. They can help you fill out y
 </p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

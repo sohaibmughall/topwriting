@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class CheapAssignment extends Component {
     render() {
@@ -32,7 +33,7 @@ export default class CheapAssignment extends Component {
 We pride ourselves on selling good quality, non-plagiarized papers that will gain high marks. And we pride ourselves on delivering those papers on time and at a price you can afford.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

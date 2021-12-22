@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class ManagementEssay extends Component {
     render() {
@@ -25,7 +26,7 @@ export default class ManagementEssay extends Component {
 <p>We provide business and other students with a variety of business related writing services. These include business research papers, business and management essays, case studies, business plans, marketing essays, leadership papers, human resource management essays, international business essays, and more. We can also help students with academic articles on any topic related to management and business as well. We can even help business students with capstone projects and business thesis and dissertation work.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

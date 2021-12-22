@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class AssignmentWriter extends Component {
     render() {
@@ -30,7 +31,7 @@ If you answered yes to the above questions, then you are in the right place. Top
 We don’t believe in hiding our writers away. They are the backbone of our services and we want you, the customer, to be able to see our writers and what they can do. We are proud of each online assignment writer we hire and we are happy for you to see them and ask them questions to ensure you choose the perfect writer for you and your assignment.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/O1.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

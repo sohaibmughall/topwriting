@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class NursingEssay extends Component {
     render() {
         return (
@@ -27,7 +27,7 @@ Don’t risk irreversible damage to your nursing career or personal reputation. 
 <p>If you place an order for an essay on the subject of nursing, we will give it to a writer who has a nursing degree, along with relevant field experience. This is our way of ensuring  you get the quality that you deserve. Your writer will work very hard using both their writing ability and their skills and experience in the medical field to ensure that your essay is an absolute success. As with our other writers, we thoroughly investigate our nursing and medical writers to ensure that they are qualified to write for nursing students. All of writers have obtained advanced degrees, are native English speakers, and were educated in the UK, Australia, or Canada.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class LawEssay extends Component {
     render() {
@@ -28,7 +29,7 @@ Once they receive your order, they will let you know that writing has begun. As 
 After your essay is finished, our editors will review it to ensure that everything is up to both our standards and yours. Then, you will be informed that it is available for your review. Once you approve, simply accept the work and download it. At that point, your legal essay is yours to use as you wish.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

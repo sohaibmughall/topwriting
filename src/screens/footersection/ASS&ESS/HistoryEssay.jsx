@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class HistoryEssay extends Component {
     render() {
         return (
@@ -27,7 +27,7 @@ export default class HistoryEssay extends Component {
 Have you already written a paper, but are now unsure about its quality? Don’t fret! Send it our way, and our proofreaders and editors will clean it up for you. Before you know it, you will have a professional and polished essay to turn in.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 export default class writemydessertation extends Component {
   render() {
     return (
@@ -35,7 +35,7 @@ Well, that’s the best question, because you will find that a lot of them don�
 But that’s ok because you’ve already found the best online website for dissertation writing help. That is, of course, UK Writings – the only place to go if you want to say do my dissertation for me.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

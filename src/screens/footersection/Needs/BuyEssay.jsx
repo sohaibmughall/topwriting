@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class BuyEssay extends Component {
     render() {
@@ -27,7 +28,7 @@ export default class BuyEssay extends Component {
 Be very aware of writing services that offer extremely cheap prices, that have poorly designed websites, and promise essays in only a couple of hours. These are red flags that indicate the company is run by an offshore company that does not hire English speaking writers, or it is a front that has been set up to take your money and potentially your identity. Keep reading to learn more about the reasons why you can and should trust UK Writings with your important essay assignments.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

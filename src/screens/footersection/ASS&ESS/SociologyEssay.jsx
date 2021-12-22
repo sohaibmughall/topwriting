@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class SociologyEssay extends Component {
     render() {
         return (
@@ -25,7 +25,7 @@ export default class SociologyEssay extends Component {
 <p>It’s really quite simple. You have a sociology paper coming due and for whatever reason, you are unable to complete it. All you have to do is place an order. Once this has been done, we will review the details of your order and hand pick a writer who is perfectly qualified to work on  your assignment. Don’t worry. You won’t be kept in the dark. Your writer will keep you up to date on the progress that they are making. They might even  have a few questions or helpful suggestions. If you need, you can send them messages as well. Once your writer has done their job, the next process begins, quality assurance testing. This where our editors make sure that your paper is factually correct, free from embarrassing spelling and grammar errors, and that your instructions have been followed. The final step is all about you. We let you know that your paper is ready and provide it to you for your review. If you’re satisfied just download the finished product and it is yours to keep.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

@@ -121,10 +121,10 @@ class Header extends Component {
                             <div className="col-xl-3 col-lg-2 col-6">
                                 <div className="header_right">
                                     <div className="header_search_wrap">
-                                        <div className="search_main">
+                                        {/* <div className="search_main">
                                             <i className="fal fa-search"></i>
                                             <span><i className="fal fa-times"></i></span>
-                                        </div>
+                                        </div> */}
                                         <div className="search_form_main">
                                             <form role="search" method="get" action="#">
                                                 <input type="text" placeholder="Search Keywords" />

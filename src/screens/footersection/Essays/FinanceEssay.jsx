@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class FinanceEssay extends Component {
     render() {
         return (
@@ -30,7 +30,7 @@ export default class FinanceEssay extends Component {
 
 <p>For more details on our guarantees, please take the time to review our policy pages.</p>
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

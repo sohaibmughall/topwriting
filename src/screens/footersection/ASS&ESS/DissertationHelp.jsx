@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class DissertationHelp extends Component {
     render() {
         return (
@@ -29,7 +29,7 @@ We know how important your dissertation is and why it’s so important to get it
 The writer who will complete your dissertation will have completed their own as all of our writers are qualified academically from a recognized UK university. Relax knowing you are getting professional dissertation help from native English speakers who understand the marking criteria for British dissertations.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

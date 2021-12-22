@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class CourseworkHelp extends Component {
     render() {
         return (
@@ -30,7 +30,7 @@ If you found your way here by Googling something like “coursework help service
 We can help you with all aspects of your coursework, whether you are struggling with the subject matter, don’t have the time to write your coursework properly, or just don’t feel confident you can write engaging coursework that hits all of the marks brackets.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

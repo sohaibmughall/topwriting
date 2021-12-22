@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class EnglishEssay extends Component {
     render() {
@@ -25,7 +26,7 @@ export default class EnglishEssay extends Component {
 <p>We firmly believe that the best writing is done by those who have education and life experience that is relevant. Because of this belief, all English writing assignments are given to writers with advanced degrees in English, literature, journalism, and other relevant degrees. Not only will we match your writing assignment to an expert in English, we will work hard to find a writer with experience and expertise in the specific topic of your paper.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

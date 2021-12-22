@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class DoMyCoursework extends Component {
     render() {
@@ -28,7 +29,7 @@ export default class DoMyCoursework extends Component {
 <p>We are a UK based company and we only employ qualified, native English speaking writers. This means your writer will have completed their own coursework and they know what the marking scheme is looking for in terms of content and structure.</p>
 <p>It’s always best to choose a UK based firm if you’re studying there as each country has different criteria for the higher marks. So don’t just say “do my coursework”, say instead “do my coursework UK”.</p>
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />

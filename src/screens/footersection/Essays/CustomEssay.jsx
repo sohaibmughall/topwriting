@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class CustomEssay extends Component {
     render() {
         return (
@@ -23,7 +23,7 @@ export default class CustomEssay extends Component {
 
 </p>
 <section className="page_title_area" >
-                        <img src="assets/img/sab.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/sab.png" alt="" /></Link>
                     </section>
 <br /> <br />
 <h2>What “Custom” Means to Top Writings</h2>

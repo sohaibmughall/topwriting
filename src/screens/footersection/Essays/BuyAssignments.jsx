@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom";
 export default class BuyAssignments extends Component {
     render() {
         return (
@@ -27,7 +27,7 @@ We will explain to you how to buy an assignment UK from TopWritings.com (hint: i
 <p>This ties into the reasons listed above. Either students don’t have the time to dedicate to writing an essay that showcases their knowledge, or they aren’t confident that they can write a good essay.</p>
 
 <section className="page_title_area" >
-                        <img src="assets/img/O1.png" alt="" />
+<Link to='/ordernow'><img src="assets/img/O1.png" alt="" /></Link>
                     </section>
 
 <br /> <br />
