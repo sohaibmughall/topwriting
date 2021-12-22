@@ -21,7 +21,7 @@ class Footer extends Component {
         }
         axios.post(`${baseurl}/subscriber`, data, options).then(
             function (response) {
-                console.log(response.data);
+                // console.log(response.data);
             }
         )
     }
@@ -29,7 +29,6 @@ class Footer extends Component {
 
 
     render() {
-        console.log(Footerdata)
         return (
             <div>
                 <footer className="footer_area footer_bg footer_space">

@@ -22,7 +22,6 @@ class Header extends Component {
             options
           )
           .then(function (response) {
-            console.log(response.data.all)
             response.data.map((item) =>
               th.setState({
                 all: response.data

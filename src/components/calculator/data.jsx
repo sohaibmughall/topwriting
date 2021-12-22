@@ -1,5 +1,4 @@
-const data = [
-    {
+const data = [{
         id: 1,
         name: "Academic paper writing",
         price: "10",
@@ -17,7 +16,7 @@ const data = [
             price: "10",
         }, {
             name: "Capstone Project",
-            price: "5,"
+            price: "5",
         }, {
             name: "Coursework",
             price: "30",
@@ -80,25 +79,26 @@ const data = [
             price: "10.90",
         }],
         academic_level: [{
-            name: "GCSE / A Level",
-            price: "1"
-        },
-        {
-            name: "HNC / HND",
-            price: "21"
-        },
-        {
-            name: "Undergraduate",
-            price: "50"
-        },
-        {
-            name: "Master's",
-            price: "35"
-        },
-        {
-            name: "Doctoral",
-            price: "40"
-        }]
+                name: "GCSE / A Level",
+                price: "1"
+            },
+            {
+                name: "HNC / HND",
+                price: "21"
+            },
+            {
+                name: "Undergraduate",
+                price: "50"
+            },
+            {
+                name: "Master's",
+                price: "35"
+            },
+            {
+                name: "Doctoral",
+                price: "40"
+            }
+        ]
     },
     {
         id: 2,
@@ -139,17 +139,18 @@ const data = [
             price: "14.29",
         }],
         academic_level: [{
-            name: "Bachelor's",
-            price: "5"
-        },
-        {
-            name: "Master's",
-            price: "10"
-        },
-        {
-            name: "Doctoral",
-            price: "20"
-        }]
+                name: "Bachelor's",
+                price: "5"
+            },
+            {
+                name: "Master's",
+                price: "10"
+            },
+            {
+                name: "Doctoral",
+                price: "20"
+            }
+        ]
     },
     {
         id: 3,
@@ -176,28 +177,28 @@ const data = [
         }, {
             name: "Power Point presentation",
             price: "11.28",
-        },
-        ],
+        }, ],
         academic_level: [{
-            name: "Undergraduate",
-            price: "1"
-        },
-        {
-            name: "Postgraduate",
-            price: "21"
-        },
-        {
-            name: "MBA",
-            price: "50"
-        },
-        {
-            name: "Law",
-            price: "35"
-        },
-        {
-            name: "Medical",
-            price: "40"
-        }]
+                name: "Undergraduate",
+                price: "1"
+            },
+            {
+                name: "Postgraduate",
+                price: "21"
+            },
+            {
+                name: "MBA",
+                price: "50"
+            },
+            {
+                name: "Law",
+                price: "35"
+            },
+            {
+                name: "Medical",
+                price: "40"
+            }
+        ]
     },
     {
         id: 4,
@@ -221,8 +222,7 @@ const data = [
         }, {
             name: "Math modeling",
             price: "15.4"
-        }
-        ]
+        }]
     },
     {
         id: 5,
@@ -234,8 +234,7 @@ const data = [
         }, {
             name: "Multiple Choice Questions (Non-time-framed)",
             price: "4.51",
-        }
-        ]
+        }]
     },
     {
         id: 6,
@@ -313,8 +312,7 @@ const data = [
         }, {
             name: "Project",
             price: "10.53",
-        }
-        ]
+        }]
     },
     {
         id: 7,
@@ -392,8 +390,7 @@ const data = [
         }, {
             name: "Project",
             price: "10.53",
-        }
-        ]
+        }]
     },
     {
         id: 8,
@@ -471,8 +468,7 @@ const data = [
         }, {
             name: "Project",
             price: "10.53",
-        }
-        ]
+        }]
     },
     {
         id: 9,
@@ -496,8 +492,7 @@ const data = [
         }, {
             name: "Product review",
             price: "30",
-        }
-        ]
+        }]
     },
     {
         id: 10,
@@ -521,8 +516,7 @@ const data = [
         }, {
             name: "Federal",
             price: "10"
-        },
-        ]
+        }, ]
     }
 ]
 
