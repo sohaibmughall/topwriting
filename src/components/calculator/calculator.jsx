@@ -23,29 +23,31 @@ class Calculator extends Component {
       level: [],
       data: {},
       levelname: "",
-      typename: ""
-
+      typename: "",
+      urgencyname:"",
+      servicename:"",
     };
   }
 
   Ordernow = () => {
     const data = new FormData();
-    console.log("OUTPUT: ", this.state.services, this.state.typechange, this.state.pages, this.state.words, this.state.academicLevel, this.state.urgency);
-    // data.append('Types_of_Services', this.state.services);
-    // data.append('Types_of_paper', this.state.typechange);
-    // data.append('Number_of_Pages_Or_Words', this.state.pages);
-    // data.append('Academic_Level', this.state.academicLevel);
-    // data.append('Urgency', this.state.urgency)
-    // const options = {
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     }
-    // }
-    // axios.post(`${baseurl}/order`, data, options).then(
-    //     function (response) {
-    //         console.log(response.data.paperType);
-    //     }
-    // )
+    console.log(this.state.urgencyname)
+    console.log("OUTPUT: ", this.state.price, this.state.typename, this.state.pages, this.state.levelname, this.state.urgencyname);
+    data.append('Types_of_Services', this.state.services);
+    data.append('Types_of_paper', this.state.typename);
+    data.append('Number_of_Pages_Or_Words', this.state.pages);
+    data.append('Academic_Level', this.state.levelname);
+    data.append('Urgency', this.state.urgencyname)
+    const options = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    axios.post(`${baseurl}/order`, data, options).then(
+        function (response) {
+            console.log(response.data.paperType);
+        }
+    )
   }
   addWords = () => {
     this.setState({ words: this.state.words + 275 });
@@ -69,7 +71,10 @@ class Calculator extends Component {
   service = (e) => {
     const datas = data.filter((number) => {
       return number.id == e.target.value;
+     
     });
+    console.log(datas);
+ 
     datas.map((item) =>
       this.setState({
         type: item.type_papers,
@@ -110,6 +115,26 @@ class Calculator extends Component {
       levelname: name[1]
     })
   }
+
+  serve= (e) => {
+    const name = e.target.value.split("-")
+    this.setState({
+      service: name[0],
+      servicename: name[1]
+    })
+    console.log(name);
+  }
+
+  urgent = (e) => {
+    const name = e.target.value.split("-")
+    this.setState({
+      urgency: name[0],
+      urgencyname: name[1]
+    })
+    
+  
+  }
+
   render() {
     let total = null;
     const totals =
@@ -154,10 +179,10 @@ class Calculator extends Component {
                       id="service_type"
                       onChange={(e) => this.service(e)}
                     >
-                      <option label="Please Select" value={this.state.price} onChange={(e) => { this.setState({ price: e.target.value }) }}></option>
+                      <option label="Please Select" value={this.state.price} onChange={(e) =>this.serve()}></option>
                       {data.map((item) => {
                         return (
-                          <option label={item.name} value={item.id}>
+                          <option label={item.name} value={item.id + "-" + item.name}>
                             {item.name}
                           </option>
                         );
@@ -206,7 +231,7 @@ class Calculator extends Component {
                           }
                         >
                           {this.state.level.map((item) => {
-                            return (
+                            return (  
                               <option
 
                                 value={item.price + "-" + item.name}
@@ -224,49 +249,50 @@ class Calculator extends Component {
                       id="customer_order_service_id"
                       onChange={(e) =>
                         // this.setState({ urgency: e.target.value })
-                        console.log(e.target.value)
+                        this.urgent(e)
+                       
                       }
                     >
                       <option label="3 hours" value={`12-3 hours`}>
                         3 hours
                       </option>
-                      <option label="6 hours" value="1">
+                      <option label="6 hours" value={`1-6 hours`}>
                         6 hours
                       </option>
-                      <option label="8 hours" value="12">
+                      <option label="8 hours" value={`12-8 hours`}>
                         8 hours
                       </option>
-                      <option label="12 hours" value="24">
+                      <option label="12 hours" value={`24-12 hours`}>
                         12 hours
                       </option>
-                      <option label="18 hours" value="30">
+                      <option label="18 hours" value={`30-18 hours`}>
                         18 hours
                       </option>
-                      <option label="24 hours" value="40">
+                      <option label="24 hours" value={`40-24 hours`}>
                         24 hours
                       </option>
-                      <option label="48 hours" value="11">
+                      <option label="48 hours" value={`11-48 hours`}>
                         48 hours
                       </option>
-                      <option label="3 days" value="23">
+                      <option label="3 days" value={`23-3 days`}>
                         3 days
                       </option>
-                      <option label="4 days" value="17">
+                      <option label="4 days" value={`17-4 days`}>
                         4 days
                       </option>
-                      <option label="5 days" value="16">
+                      <option label="5 days" value={`16-5 days`}>
                         5 days
                       </option>
-                      <option label="6 days" value="13">
+                      <option label="6 days" value={`13-6 days`}>
                         6 days
                       </option>
-                      <option label="7 days" value="8">
+                      <option label="7 days" value={`8-7 days`}>
                         7 days
                       </option>
-                      <option label="10 days" value="5">
+                      <option label="10 days" value={`5-10 days`}>
                         10 days
                       </option>
-                      <option label="14 days" value="6">
+                      <option label="14 days" value={`6-14 days`}>
                         14 days
                       </option>
                     </select>
