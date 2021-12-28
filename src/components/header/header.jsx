@@ -33,7 +33,7 @@ class Header extends Component {
 
     render() {
         return (
-            <header className="header_area">
+            <header className="header_area ">
                 <div className="header_top pl-130 pr-130">
                     <div className="container-fluid">
                         <div className="row">

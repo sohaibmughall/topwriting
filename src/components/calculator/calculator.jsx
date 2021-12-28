@@ -24,29 +24,27 @@ class Calculator extends Component {
       data: {},
       levelname: "",
       typename: "",
-      urgencyname:"",
-      servicename:"",
+      urgencyname: "",
+      servicename: "",
     };
   }
 
   Ordernow = () => {
     const data = new FormData();
-    console.log(this.state.urgencyname)
-    console.log("OUTPUT: ", this.state.price, this.state.typename, this.state.pages, this.state.levelname, this.state.urgencyname);
-    data.append('Types_of_Services', this.state.services);
+    data.append('Types_of_Service', this.state.servicename);
     data.append('Types_of_paper', this.state.typename);
-    data.append('Number_of_Pages_Or_Words', this.state.pages);
+    data.append('Number_of_Pages_Or_Words', this.state.pages + "," + this.state.words);
     data.append('Academic_Level', this.state.levelname);
     data.append('Urgency', this.state.urgencyname)
     const options = {
-        headers: {
-            'Content-Type': 'application/json',
-        }
+      headers: {
+        'Content-Type': 'application/json',
+      }
     }
     axios.post(`${baseurl}/order`, data, options).then(
-        function (response) {
-            console.log(response.data.paperType);
-        }
+      function (response) {
+        console.log(response.data.paperType);
+      }
     )
   }
   addWords = () => {
@@ -69,12 +67,18 @@ class Calculator extends Component {
     this.setState({ words: this.state.words - 275 });
   };
   service = (e) => {
+    const name = e.target.value.split("-")
+    this.setState({
+      service: name[0],
+      servicename: name[1]
+    })
+    console.log(name);
     const datas = data.filter((number) => {
-      return number.id == e.target.value;
-     
+      return number.id == name[0];
+
     });
     console.log(datas);
- 
+
     datas.map((item) =>
       this.setState({
         type: item.type_papers,
@@ -116,13 +120,8 @@ class Calculator extends Component {
     })
   }
 
-  serve= (e) => {
-    const name = e.target.value.split("-")
-    this.setState({
-      service: name[0],
-      servicename: name[1]
-    })
-    console.log(name);
+  serve = (e) => {
+
   }
 
   urgent = (e) => {
@@ -131,8 +130,8 @@ class Calculator extends Component {
       urgency: name[0],
       urgencyname: name[1]
     })
-    
-  
+
+
   }
 
   render() {
@@ -140,7 +139,6 @@ class Calculator extends Component {
     const totals =
       +this.state.urgency +
       +this.state.academicLevel +
-      +this.state.price +
       +this.state.typechange;
     const muly = totals * this.state.pages;
     total = muly;
@@ -179,7 +177,7 @@ class Calculator extends Component {
                       id="service_type"
                       onChange={(e) => this.service(e)}
                     >
-                      <option label="Please Select" value={this.state.price} onChange={(e) =>this.serve()}></option>
+                      <option label="Please Select" ></option>
                       {data.map((item) => {
                         return (
                           <option label={item.name} value={item.id + "-" + item.name}>
@@ -231,7 +229,7 @@ class Calculator extends Component {
                           }
                         >
                           {this.state.level.map((item) => {
-                            return (  
+                            return (
                               <option
 
                                 value={item.price + "-" + item.name}
@@ -250,7 +248,7 @@ class Calculator extends Component {
                       onChange={(e) =>
                         // this.setState({ urgency: e.target.value })
                         this.urgent(e)
-                       
+
                       }
                     >
                       <option label="3 hours" value={`12-3 hours`}>

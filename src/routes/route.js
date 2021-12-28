@@ -66,9 +66,10 @@ import Cart from '../screens/cart/cart';
 import Ordernow from '../screens/Order Now/ordernow';
 import Products from '../screens/services/servicesInner/academicPaperWriting';
 export default class route extends Component {
+    
     render() {
         return (
-            <Router>
+            <Router ref={this.myRef}>
                 <Switch>
                     <Layout>
                         <Route exact path='/about' component={About} />
@@ -116,11 +117,6 @@ export default class route extends Component {
                         <Route exact path='/faqs' component={Faqs}/>
                         <Route exact path='/termoc' component={TermandCondition}/>
                         <Route exact path='/cart' component={Cart}/>
-
-                        
-
-
-
                     </Layout>
                 </Switch>
             </Router>
