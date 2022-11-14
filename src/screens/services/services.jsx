@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../Spinner";
-import { baseurl } from "../../components/Apiurl/apiurl";
+import { baseurl, imageurl } from "../../components/Apiurl/apiurl";
 import { allurl } from "../../components/Apiurl/apiurl";
+import { getJwtToken } from "../../helpers";
 class Services extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +16,12 @@ class Services extends Component {
   }
 
   async componentDidMount() {
-    const data = new FormData();
     const th = this;
     // this.setState({loading:true})
-    const options = { headers: { "Content-Type": "application/json" } };
+    const token = getJwtToken()
+    const options = { headers: { "x-access-token": token } };
     await axios
-      .get(`${baseurl}/allcollection`, data, options)
+      .get(`${baseurl}/allcollection`, options)
       .then(function (response) {
         th.setState({
           collection: response.data,
@@ -33,37 +34,41 @@ class Services extends Component {
     return (
       <div>
         <main>
-          
+
 
           <section className="courses_area pt-120 pb-120">
             <div className="container">
 
-             
-              <div className="row grid">
+
+              <div className="row grid text-center">
                 {this.state.loading ? (
                   <Spinner />
                 ) : (
                   this.state.collection.map((element) => {
+                    if (!element.image) {
+                      return null
+                    }
+
                     return (
-                      <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
+                      <div className="col-lg-3 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
                         <div className="course_single mb-30">
                           <div className="c_thumb">
-                            <Link to={`/products/${element.id}`}>
+                            <Link to={`/products/${element._id}`}>
                               {" "}
                               <img
-                                src={`${allurl}image/product/${element.image}`}
+                                src={`${imageurl}/${element.image}`}
                                 alt=""
-                                style={{ width:"70%" }}
+                                style={{ width: "100%" }}
                               />
                             </Link>
                           </div>
-                          <div className="course_content">
+                          {/* <div className="course_content">
                             <h3 className="title">
                               <Link to={`/products/${element.id}`}>
                                 {element.name}
                               </Link>
                             </h3>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     );

@@ -2,36 +2,37 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import { baseurl } from "../../components/Apiurl/apiurl";
+import { getJwtToken } from '../../helpers';
 
 class Header extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-            all:[]
+        this.state = {
+            all: []
         }
     }
 
     async componentDidMount() {
-        const data = new FormData();
         const th = this;
-        const options = { headers: { "Content-Type": "application/json" } };
+        const token = getJwtToken()
+        const options = { headers: { "x-access-token": token } };
         await axios
-          .get(`${baseurl}/allcollection`,
-            data,
-            options
-          )
-          .then(function (response) {
-            response.data.map((item) =>
-              th.setState({
-                all: response.data
-              })
-            );
-          });
-      }
+            .get(`${baseurl}/allcollection`,
+                options,
+            )
+            .then(function (response) {
+                response.data.map((item) =>
+                    th.setState({
+                        all: response.data
+                    })
+                );
+            });
+    }
 
 
     render() {
+        const user = JSON.parse(localStorage.getItem('user'))
         return (
             <header className="header_area ">
                 <div className="header_top pl-130 pr-130">
@@ -58,23 +59,24 @@ class Header extends Component {
                         <div className="row align-items-center">
                             <div className="col-xl-2 col-lg-2 col-6">
                                 <div className="logo">
-                                   <Link to="/"><img src="assets\img\logo\logo.png" alt="" /></Link> 
+                                    <Link to="/"><img src="assets\img\logo\logo1.png" alt="" /></Link>
                                 </div>
                             </div>
                             <div className="col-xl-7 col-lg-8 d-none d-lg-block">
                                 <nav className="main_menu">
                                     <ul>
-                                        <li className="active"><a href="/">Home</a></li>
-                                        <li className="has_dropdown">
-                                            <Link to='/services'>Services</Link>
-                                            <ul className="submenu">
-                                            {this.state.all.map((element) => {
-                    return (
-                                                <li className="d-flex">
-                                                    <Link to={`/products/${element.id}`}>{element.name}</Link>
-                                                </li>
-                    )})}
-                                            </ul>
+                                        <li className={`${window.location.pathname === "/" && 'active'}`}><Link to="/">Home</Link></li>
+                                        <li className={`${window.location.pathname === "/services" && 'active'}`}>
+                                            <Link to='/services' >Services</Link>
+                                            {/* <ul className="submenu">
+                                                {this.state.all.map((element) => {
+                                                    return (
+                                                        <li className="d-flex">
+                                                            <Link to={`/products/${element._id}`}>{element.name}</Link>
+                                                        </li>
+                                                    )
+                                                })}
+                                            </ul> */}
                                             {/* <ul className="submenu">
                                                 <li className="has_dropdown">
                                                     <a href="#">Service 1</a>
@@ -104,8 +106,8 @@ class Header extends Component {
                                                 <li><a href="course-details.html">Course Details</a></li>
                                             </ul>
                                         </li> */}
-                                        <li><Link to='/writers'>Our Writers</Link></li>
-                                        <li><Link to='/about'>About Us</Link></li>
+                                        <li class={`${window.location.pathname === "/writers" && 'active'}`}><Link to='/writers'>Our Writers</Link></li>
+                                        <li class={`${window.location.pathname === "/about" && 'active'}`}><Link to='/about'>About Us</Link></li>
                                         {/* <li className="has_dropdown">
                                             <a href="#">Blog</a>
                                             <ul className="submenu">
@@ -113,7 +115,7 @@ class Header extends Component {
                                                 <li><a href="blog-details.html">Blog Details</a></li>
                                             </ul>
                                         </li> */}
-                                        <li><Link to='/contact'>Contact Us</Link></li>
+                                        <li class={`${window.location.pathname === "/contact" && 'active'}`}><Link to='/contact'>Contact Us</Link></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -133,19 +135,22 @@ class Header extends Component {
                                     </div>
                                     <div className="hamburger_menu">
                                         <Link to="/cart" className="fal fa-shopping-cart"></Link>
-                                            
-                                            {/* <i className="fal fa-bars"></i> */}
-                                        
+
+                                        {/* <i className="fal fa-bars"></i> */}
+
                                     </div>
-                                    <div className="account">
+                                    {!user ? <div className="account">
                                         <Link to='/account'><i className="fal fa-key"></i>account</Link>
-                                    </div>
+                                    </div> : <div className="account">
+                                        <Link to='/'><i className="fal fa-user"></i>{user.user.name}</Link>
+                                    </div>}
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
+            </header >
         );
     }
 }

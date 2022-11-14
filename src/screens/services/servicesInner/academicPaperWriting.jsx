@@ -2,80 +2,72 @@ import React, { Component } from "react";
 import Calculator from "../../../components/calculator/calculator";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { allurl, baseurl } from "../../../components/Apiurl/apiurl";
+import { baseurl, imageurl } from "../../../components/Apiurl/apiurl";
+import { getJwtToken } from "../../../helpers";
 
 class Products extends Component {
   constructor(props) {
     super(props);
-    console.log("Hello I am a constructor");
     this.state = {
-      products: [],
+      products: []
     };
   }
 
   async componentDidMount() {
+
     const data = new FormData();
     const th = this;
-    const options = { headers: { "Content-Type": "application/json" } };
+    const token = getJwtToken()
+    const options = { headers: { "x-access-token": token } };
     await axios
       .get(
         `${baseurl}/get-product/${this.props.match.params.id}`,
+        options,
         data,
-        options
       )
       .then(function (response) {
-        // console.log(response.data.products)
-        response.data.map((item) =>
+        if (response) {
           th.setState({
-            products:item.products
+            products: response.data
           })
-        );
+        }
       });
   }
 
+
   render() {
+
     return (
       <>
         <main>
-         
 
           <section className="courses_area pt-120 pb-120">
             <div className="container">
-              <div className="row">
-                <div className="col-12">
-                  <div className="masonry_active mb-40">
-                    <button
-                      className="active"
-                      data-filter="*"
-                      style={{ marginLeft: "500px" }}
-                    >
-                      PRODUCTS
-                    </button>
-                  </div>
-                </div>
-              </div>
               <div className="row grid">
-              {this.state.products.map((element) => {
+                {this.state.products.map((element) => {
+                  if (element.image.length === 0) {
+                    return null
+                  }
                   return (
-                    <div className="col-lg-4 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
-                      <div className="course_single mb-30">
-                        <div className="c_thumb">
-                          <img
-                            src={`${allurl}image/product/${element.image}`}
-                            alt=""
-                            style={{ width:"70%" }}
-                          />
-                        </div>
-                        <div className="course_content">
-                          <h3 className="title">{element.name}</h3>
-                          <div className="about_btn mt-10 d-flex justify-content-between">
-                            <Link to="/cart" className="thm_btn thm_btn-2">
+                    <div className="col-lg-3 col-md-6 col-sm-6 grid-item mb-30 cat1 cat4 cat5">
+                      <Link to="/cart" onClick={() => localStorage.setItem('collection_id', element.collection_id)}>
+                        <div className="course_single mb-30">
+                          <div className="c_thumb text-center">
+                            <img
+                              src={`${imageurl}/${element.image}`}
+                              alt=""
+                              style={{ width: "100%" }}
+                            />
+                          </div>
+                          {/* <div className="course_content text-center">
+                            <h3 className="title">{element.name}</h3>
+                            <div className="about_btn mt-10 text-center">
                               Order Now
                               <i className="fal fa-long-arrow-right"></i>
-                            </Link>
-                          </div>
+                            </div>
+                          </div> */}
                         </div>
-                      </div>
+                      </Link>
                     </div>
                   );
                 })}

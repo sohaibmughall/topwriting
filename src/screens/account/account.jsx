@@ -12,29 +12,30 @@ class Account extends Component {
         }
     }
     login = () => {
-        const data = new FormData();
-        data.append('email', this.state.email);
-        data.append('password', this.state.pass);
-        const options = {
-            headers: {
-                'Content-Type': 'application/json',
-            }
+        const data = {
+            email: this.state.email,
+            password: this.state.pass,
         }
+        const options = { headers: { 'Content-Type': 'application/json', 'Accept': '*/*', 'Connection': 'keep-alive' } }
+        const th = this
         axios.post(`${baseurl}/login`, data, options).then(
             function (response) {
-                console.log(response.data);
+                localStorage.setItem("user", JSON.stringify(response.data))
+                th.props.history.push('/')
             }
         )
     }
     registor = () => {
-        const data = new FormData();
-        data.append('email', this.state.email);
-        data.append('password', this.state.pass);
-        data.append('name', this.state.name);
-        const options = { headers: { 'Content-Type': 'application/json' } }
-        axios.post(`${baseurl}/api/register`, data, options).then(
+        const data = {
+            email: this.state.email,
+            password: this.state.pass,
+            name: this.state.name
+        }
+        const th = this
+        const options = { headers: { 'Content-Type': 'application/json', 'Accept': '*/*', 'Connection': 'keep-alive' } }
+        axios.post(`${baseurl}/register`, data, options).then(
             function (response) {
-                console.log(response.data);
+                th.props.history.push('/')
             }
         )
 

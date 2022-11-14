@@ -5,6 +5,7 @@ import data from "./data";
 import axios from 'axios'
 import { add, total } from "cart-localstorage";
 import { baseurl } from '../../components/Apiurl/apiurl';
+import { getJwtToken } from "../../helpers";
 
 class Calculator extends Component {
   constructor(props) {
@@ -26,26 +27,50 @@ class Calculator extends Component {
       typename: "",
       urgencyname: "",
       servicename: "",
+      collection: [],
     };
   }
 
+
+
   Ordernow = () => {
-    const data = new FormData();
-    data.append('Types_of_Service', this.state.servicename);
-    data.append('Types_of_paper', this.state.typename);
-    data.append('Number_of_Pages_Or_Words', this.state.pages + "," + this.state.words);
-    data.append('Academic_Level', this.state.levelname);
-    data.append('Urgency', this.state.urgencyname)
-    const options = {
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    }
-    axios.post(`${baseurl}/order`, data, options).then(
-      function (response) {
-        console.log(response.data.paperType);
-      }
-    )
+
+    let total = null;
+    const totals =
+      +this.state.urgency +
+      +this.state.academicLevel +
+      +this.state.typechange;
+    const muly = totals * this.state.pages;
+    total = muly;
+
+    const myOrder = {
+      id: this.state.id,
+      paperType: this.state.serviceType,
+      serviceType: this.state.typechange,
+      price: total,
+      level: this.state.academicLevel,
+      pages: this.state.pages,
+      words: this.state.words,
+      urgency: this.state.urgency,
+    };
+
+    console.log(myOrder)
+    // const data = new FormData();
+    // data.append('Types_of_Service', this.state.servicename);
+    // data.append('Types_of_paper', this.state.typename);
+    // data.append('Number_of_Pages_Or_Words', this.state.pages + "," + this.state.words);
+    // data.append('Academic_Level', this.state.levelname);
+    // data.append('Urgency', this.state.urgencyname)
+    // const options = {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   }
+    // }
+    // axios.post(`${baseurl}/order`, data, options).then(
+    //   function (response) {
+    //     console.log(response.data.paperType);
+    //   }
+    // )
   }
   addWords = () => {
     this.setState({ words: this.state.words + 275 });
@@ -67,17 +92,16 @@ class Calculator extends Component {
     this.setState({ words: this.state.words - 275 });
   };
   service = (e) => {
+    console.log(e.target.value)
     const name = e.target.value.split("-")
     this.setState({
       service: name[0],
       servicename: name[1]
     })
-    console.log(name);
-    const datas = data.filter((number) => {
-      return number.id == name[0];
+    const datas = this.state.collection.filter((number) => {
+      return number._id === name[0];
 
     });
-    console.log(datas);
 
     datas.map((item) =>
       this.setState({
@@ -90,23 +114,38 @@ class Calculator extends Component {
     );
   };
 
-  componentDidMount = () => {
-    const datas = data.filter((number) => {
-      return number.id === 1;
-    });
-    datas.map((item) =>
-      this.setState({
-        type: item.type_papers,
-        price: item.price,
-        level: item.academic_level,
-        serviceType: item.name,
-        id: item.id,
-      })
-    );
+  componentDidMount = async () => {
+
+    const th = this;
+    const token = getJwtToken()
+    const options = { headers: { "x-access-token": token } };
+    await axios
+      .get(`${baseurl}/allcollection`, options)
+      .then(function (response) {
+
+        if (localStorage.getItem('collection_id')) {
+          const datas = response.data.filter((number) => {
+            return number._id === localStorage.getItem('collection_id');
+          });
+          datas.map((item) =>
+            th.setState({
+              type: item.type_papers,
+              price: item.price,
+              level: item.academic_level,
+              serviceType: item.name,
+              id: item._id,
+            })
+          );
+        } else {
+          th.setState({
+            collection: response.data
+          })
+        }
+      });
   };
   typech = (e) => {
     const name = e.target.value.split("-")
-    console.log(name[0]);
+
     this.setState({
       typechange: name[0],
       typename: name[1]
@@ -131,10 +170,13 @@ class Calculator extends Component {
       urgencyname: name[1]
     })
 
-
   }
 
   render() {
+    if (window.location.pathname === "/") {
+      localStorage.removeItem('collection_id')
+    }
+
     let total = null;
     const totals =
       +this.state.urgency +
@@ -142,26 +184,11 @@ class Calculator extends Component {
       +this.state.typechange;
     const muly = totals * this.state.pages;
     total = muly;
+
     // const dataToTypeChange = this.state.data;
     // dataToTypeChange = this.state.typechange;
     // console.log(dataToTypeChange.name);
 
-    // const myOrder = {
-    //   id: this.state.id,
-    //   paperType: this.state.serviceType,
-    //   serviceType: this.state.typechange,
-    //   price: total,
-    //   level: this.state.academicLevel,
-    //   pages: this.state.pages,
-    //   words: this.state.words,
-    //   urgency: this.state.urgency,
-    // };
-    // console.log("Order:", myOrder);
-    // add(myOrder, this.state.pages);
-
-    // const placeOrder = () => {
-    //   add(myOrder, this.state.pages);
-    // };
     const { summary } = this.props;
     return (
       <main>
@@ -172,20 +199,25 @@ class Calculator extends Component {
                 <div className="course_dtls_left mb-30">
                   <div className="cdl_top mb-30">
 
-                    <label for="service_type" >TYPES OF SERVICE</label>
-                    <select
-                      id="service_type"
-                      onChange={(e) => this.service(e)}
-                    >
-                      <option label="Please Select" ></option>
-                      {data.map((item) => {
-                        return (
-                          <option label={item.name} value={item.id + "-" + item.name}>
-                            {item.name}
-                          </option>
-                        );
-                      })}
-                    </select>
+                    {
+                      !localStorage.getItem('collection_id') &&
+                      <>
+                        <label for="service_type" >TYPES OF SERVICE</label>
+                        <select
+                          id="service_type"
+                          onChange={(e) => this.service(e)}
+                        >
+                          <option label="Please Select" ></option>
+                          {this.state.collection.map((item) => {
+                            return (
+                              <option label={item.name} value={item._id + "-" + item.name}>
+                                {item.name}
+                              </option>
+                            );
+                          })}
+                        </select>
+                      </>
+                    }
                     <label for="paper_type" >TYPE OF PAPER</label>
                     <select
                       id="paper_type"
@@ -306,8 +338,8 @@ class Calculator extends Component {
                   </div>
                 </div>
               </div>
-              {summary == true ? (
-                <div className="col-lg-4">
+              {summary && (
+                <div className="col-lg-12">
                   <div className="course_dtls_right">
                     <div className="course_widget mb-30">
                       <div>
@@ -327,7 +359,7 @@ class Calculator extends Component {
                     </div>
                   </div>
                 </div>
-              ) : null}
+              )}
             </div>
           </div>
         </section>
