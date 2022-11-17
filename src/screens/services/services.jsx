@@ -18,10 +18,10 @@ class Services extends Component {
   async componentDidMount() {
     const th = this;
     // this.setState({loading:true})
-    const token = getJwtToken()
-    const options = { headers: { "x-access-token": token } };
+    // const token = getJwtToken()
+    // const options = { headers: { "x-access-token": token } };
     await axios
-      .get(`${baseurl}/allcollection`, options)
+      .get(`${baseurl}/collections`)
       .then(function (response) {
         th.setState({
           collection: response.data,
